@@ -1,3 +1,2 @@
---find-links=http://stigma.nowoczesnapolska.org.pl/pypi/
-
 Django>=1.1.1,<1.2
+lxml>=2.2
