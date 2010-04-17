@@ -95,11 +95,6 @@ LOGOUT_URL = '/cas/logout/'
 CAS_CUSTOM_ATTRIBUTES_CALLBACK = 'utils.custom_attributes_callback'
 SESSION_COOKIE_NAME = 'fnpcas'
 
-# Python logging settings
-import logging
-import logging.config
-logging.config.fileConfig(path.join(PROJECT_ROOT, "logging.cfg"))
-
 # Import localsettings file, which may override settings defined here
 try:
     from localsettings import *
