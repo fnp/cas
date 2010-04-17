@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load gravatar i18n %}
+
+{% block content %}
+	<div class="user_avatar">
+		<img src="{% gravatar request.user.email 120 %}">
+		<p><a href="{% url cas_provider.views.logout %}">{% trans "Logout" %}</a></p>
+	</div>
+
+	<div id="details">
+		{% if messages %}
+			<p>{% for message in messages %}<span class="message">{{ message }}</span>{% endfor %}</p>
+    	{% endif %}
+
+		<h2>{% trans "Your profile" %}</h2>
+    <form method="post" action="/accounts/change_profile">
+    	<table>
+    		{{ basic_form.as_table }}
+			<tr><td colspan="2"><button type="submit">{% trans "Change profile" %}</button></td></tr>
+		</table>
+	</form>
+
+	<h2>{% trans "Password change" %}</h2>
+	<form method="post" action="/accounts/change_password">
+    	<table>
+    		{{ pass_form.as_table }}
+		<tr><td colspan="2"><button type="submit">{% trans "Change password" %}</button></td></tr>
+		</table>
+	</form>
+	</div>
+
+	<div id="services-list">
+		<h2>{% trans "Availble services" %}</h2>
+		<a href="http://redakcja.nowoczesnapolska.org.pl/">
+			<img src="http://www.nowoczesnapolska.org.pl/wordpress/wp-content/uploads/2008/11/wl-logo-white.png">
+		</a>
+		<a href="http://redmine.nowoczesnapolska.org.pl/">
+			<img src="{{ MEDIA_URL }}static/redmine_logo.png">
+		</a>
+	</div>
+{% endblock %}

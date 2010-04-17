@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-04-18 10:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:15
+msgid "Your new password"
+msgstr "Twoje nowe hasło"
+
+#: forms.py:17
+msgid "Repeated password"
+msgstr "Powtórzone hasło"
+
+#: forms.py:24
+msgid "Passwords do not match!"
+msgstr "Hasło i powtórzenie się nie zgadzają!"
+
+#: templates/account/profile.html:12
+msgid "Your profile"
+msgstr "Twój profil"
+
+#: templates/account/profile.html:16
+msgid "Change profile"
+msgstr "Zmień profil"
+
+#: templates/account/profile.html:20
+msgid "Password change"
+msgstr "Zmiana hasła"
+
+#: templates/account/profile.html:24
+msgid "Change password"
+msgstr "Zmień hasło"
+
+#: templates/account/profile.html:30
+msgid "Availble services"
+msgstr "Dostępne usługi"

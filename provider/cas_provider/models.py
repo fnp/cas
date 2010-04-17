@@ -10,14 +10,14 @@ class ServiceTicket(models.Model):
     service = models.URLField(verify_exists=False)
     ticket = models.CharField(max_length=256)
     created = models.DateTimeField(auto_now=True)
-    
+
     def __unicode__(self):
         return "%s (%s) - %s" % (self.user.username, self.service, self.created)
-        
+
 class LoginTicket(models.Model):
     ticket = models.CharField(max_length=32)
     created = models.DateTimeField(auto_now=True)
-    
+
     def __unicode__(self):
         return "%s - %s" % (self.ticket, self.created)
 
@@ -30,7 +30,7 @@ def auth_success_response(user):
     if settings.CAS_CUSTOM_ATTRIBUTES_CALLBACK:
         callback = get_callable(settings.CAS_CUSTOM_ATTRIBUTES_CALLBACK)
         attrs = callback(user)
-    
+
     response = ElementRoot(CAS + 'serviceResponse')
     auth_success = etree.SubElement(response, CAS + 'authenticationSuccess')
     username = etree.SubElement(auth_success, CAS + 'user')

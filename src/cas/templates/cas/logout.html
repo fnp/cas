@@ -1,12 +1,21 @@
-{% extends "cas_base.html" %}
- 
+{% extends "base.html" %}
+{% load i18n %}
+
 {% block title %}
 Logged out
 {% endblock %}
- 
+
 {% block content %}
-    <h3>Logged out</h3>
- 
-    <p>You have successfully logged out. To ensure that you are logged out of all services, please close your browser.</p>
-    {% if url %}<p><a href="{{ url }}">Click here</a> to return to {{ url }}</p>{% endif %}
+    <h1>{% trans "Logged out" %}</h1>
+
+    <p>{% blocktrans %}You have successfully logged out. To ensure that you are logged out of all services, please close your browser.{% endblocktrans %}</p>
+
+	{% if url %}
+	<p>{% blocktrans %}You can return to service you came from: <a href="{{ url }}">{{ url }}</a>{% endblocktrans %}</p>
+	{% endif %}
+
+	{% url cas_provider.views.login as login_url %}
+    <p>{% blocktrans %}You can also <a href="{{ login_url }}">login again</a>{% endblocktrans %}</p>
+
+	{% include "horizontal_footer.html" %}
 {% endblock %}

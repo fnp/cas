@@ -1,21 +1,21 @@
-{% extends "cas_base.html" %}
+{% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
+
   <form action='.' method='post'>
-    <fieldset>
-      <legend>Zaloguj się</legend>
-      {% if errors %}
-        <ul>
-            {% for error in errors %}
-                <li>{{ error|escape }}</li>
-            {% endfor %}
-        </ul>
-      {% endif %}
-      <table style="border: none;">
-        {{ form.as_table }}
-      </table>
-      <p><input type="submit" value="Login"/></p>
-    </fieldset>
+    <h1>{% trans "Login" %}</h1>
+
+	{% for error in errors %}
+	    <p>{{ error }}</p>
+	{% endfor %}
+
+	<table>
+    	{{ form.as_table }}
+    	<tr><td><input type="submit" value="{% trans "Login me in" %}"/></td></tr>
+	</table>
+
   </form>
+
+  {% include "horizontal_footer.html" %}
 {% endblock %}
- 

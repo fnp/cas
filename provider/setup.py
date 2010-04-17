@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
- 
+
 setup(
     name='django-cas-provider',
     version='0.2',
