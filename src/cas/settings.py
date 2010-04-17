@@ -72,7 +72,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.doc.XViewMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'cas.urls'
 
 TEMPLATE_DIRS = (
     PROJECT_ROOT + '/templates',    
