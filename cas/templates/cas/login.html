@@ -1,0 +1,21 @@
+{% extends "cas_base.html" %}
+
+{% block content %}
+  <form action='.' method='post'>
+    <fieldset>
+      <legend>Zaloguj się</legend>
+      {% if errors %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error|escape }}</li>
+            {% endfor %}
+        </ul>
+      {% endif %}
+      <table style="border: none;">
+        {{ form.as_table }}
+      </table>
+      <p><input type="submit" value="Login"/></p>
+    </fieldset>
+  </form>
+{% endblock %}
+ 
