@@ -10,10 +10,6 @@
   Alias /media/ $MEDIA_ROOT
 
   #
-  # Logs
-  LogLevel info
-
-  #
   # WSGI configuration follows
   #
 
@@ -46,6 +42,9 @@
   #   ExpiresActive On
   #   ExpiresDefault "now plus 1 year"
   #</Directory>
-
+  
+  LogLevel info
+  ErrorLog /var/log/apache2/$PROJECT_NAME/error.log
+  CustomLog /var/log/apache2/$PROJECT_NAME/access.log combined
 </VirtualHost>
                             

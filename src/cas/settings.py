@@ -94,7 +94,7 @@ INSTALLED_APPS = (
 # django-cas-provider settings
 LOGIN_URL = '/cas/login/'
 LOGOUT_URL = '/cas/logout/'
-CAS_CUSTOM_ATTRIBUTES_CALLBACK = 'utils.custom_attributes_callback'
+CAS_CUSTOM_ATTRIBUTES_CALLBACK = 'cas.utils.custom_attributes_callback'
 SESSION_COOKIE_NAME = 'fnpcas'
 
 # Import localsettings file, which may override settings defined here
