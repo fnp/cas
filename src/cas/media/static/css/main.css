@@ -31,6 +31,16 @@ body {
 	margin-bottom: 2em;
 }
 
+#details .message {
+    border: 2px solid green;
+    font-size: 2em;
+    padding: 20px;
+}
+
+#details h2 {
+    margin-top: 40px;
+}
+
 .user_avatar {
 	float: left;
 	margin: 1em;
