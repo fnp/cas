@@ -5,7 +5,7 @@ Login
 {% endblock %}
 
 {% block content %}
-  <form action='.' method='post'>
+  <form action='{% url login %}' method='post'>
     <fieldset>
       <legend>Log in to your account</legend>
       {% if errors %}

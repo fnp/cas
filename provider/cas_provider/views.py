@@ -4,6 +4,7 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as auth_login, logout as auth_logout
+from django.utils.encoding import smart_str
 from django.utils.translation import ugettext_lazy as _
 
 from cas_provider.forms import LoginForm
@@ -24,7 +25,7 @@ __all__ = ['login', 'validate', 'service_validate', 'logout']
 
 def _add_query_param(url, param, value):
     parsed = urlparse.urlparse(url)
-    query = url_parse_qs(parsed.query)
+    query = url_parse_qs(smart_str(parsed.query))
     query[param] = [unicode(value, 'utf-8')]
     query = [ ((k, v) if len(v) != 1 else (k, v[0])) for k, v in query.iteritems() ]
     parsed = urlparse.ParseResult(parsed.scheme, parsed.netloc,
