@@ -7,7 +7,6 @@ import sys
 PROJECT_ROOT = path.realpath(path.dirname(__file__))
 sys.path = [
     path.abspath(path.join(PROJECT_ROOT, '..')),
-    path.abspath(path.join(PROJECT_ROOT, '..', '..', "provider")),
 ] + sys.path
 
 try:

@@ -1,20 +1,86 @@
-body {
-	background-color: #eee;
+.enclose {
+    text-align: center;
+    min-height: 500px;
+    background: url(/media/static/brackets.png) no-repeat 50% 0;
+    margin-top: 1em;
 }
 
-#content_wrap {
-	background-color: #555;
-	margin: 0px 5%;
-	padding: 5px;
+.enclosed {
+    margin-top: 7em;
+    display: inline-block;
+    text-align: left;
+    max-width: 300px;
+    background-color: rgb(247, 247, 247);
+    background-color: rgba(247, 247, 247, .5);
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+form p {
+    margin: 0;
+}
+form label, form input {
+    display: block;
+    width: 100%;
+}
+#login-form input {
+    font-size: 1.75em;
+    margin-bottom: .4em;
+}
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    background-color: #F7F7F7;
+    color: black;
+    font-family: Lato;
+}
+
+#header-wrap {
+    background: #191919;
+    color: #989898;
+}
+header {
+    max-width: 960px;
+    margin: auto;
+    padding: 1em 0;
+}
+header img {
+    margin: 0 20px;
+    vertical-align: middle;
+}
+footer, #content_push {
+    height: 10em;
+}
+footer {
+
+}
+
+#content-wrap {
 }
 
 #content {
-	background-color: white;
-	border-radius: 10px;
-	margin: 5px;
-	padding: 0.2em 1em;
-	overflow: hidden;
+    max-width: 960px;
+    margin: auto;
 }
+#content-inner {
+}
+
+
+
+
 
 #details {
 	margin: 1em;
@@ -49,19 +115,24 @@ body {
 }
 
 .user_avatar img {
-	border: 1px solid black;
+    box-shadow: 0 0 .2em black;
 }
 
 #services-list {
-	width: 250px;
-	float: right;
-	margin: 1em 2em;
+    clear: both;
+    border-top: 1px solid red;
+}
+
+#services-list a {
+    
 }
 
 #services-list img {
-	width: 250px;
-	margin: 1em 0em;
+	width: 90px;
+    height: 50px;
+	margin: 10px 10px 0 0;
 }
+
 
 img.small_logo {
 	width: 250px;

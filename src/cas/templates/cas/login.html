@@ -3,19 +3,19 @@
 
 {% block content %}
 
-  <form action='{% url cas_login %}' method='post'>
+<div class="enclose">
+  <form class="enclosed" id="login-form" action='{% url "cas_login" %}' method='post'>
+    {% csrf_token %}
     <h1>{% trans "Login" %}</h1>
 
 	{% for error in errors %}
 	    <p>{{ error }}</p>
 	{% endfor %}
 
-	<table>
-    	{{ form.as_table }}
-    	<tr><td><input type="submit" value="{% trans "Login me in" %}"/></td></tr>
-	</table>
+    {{ form.as_p }}
+    <input type="submit" value="{% trans 'Login me in' %}" tabindex="10" />
 
   </form>
+</div>
 
-  {% include "horizontal_footer.html" %}
 {% endblock %}

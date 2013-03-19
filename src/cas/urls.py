@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-from django.conf.urls.defaults import *
-from django.views.generic.simple import redirect_to
+from django.conf.urls import include, patterns, url
+from django.views.generic import RedirectView
 from django.contrib import admin
 from django.conf import settings
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', redirect_to, {'url': '/accounts/'}),
+    url(r'^$', RedirectView.as_view(url='/accounts/')),
 
     # django-cas-provider
     url(r'^cas/', include('cas_provider.urls')),

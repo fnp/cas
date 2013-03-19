@@ -3,8 +3,10 @@
 
 {% block content %}
 	<div class="user_avatar">
-		<img src="{% gravatar request.user.email 120 %}">
-		<p><a href="{% url cas_provider.views.logout %}">{% trans "Logout" %}</a></p>
+		<img src="{% gravatar_for_email request.user.email 120 %}"
+            alt="Gravatar"
+            title="{% trans 'Change at Gravatar.com' %}">
+		<p><a href="{% url 'cas_provider.views.logout' %}">{% trans "Logout" %}</a></p>
 	</div>
 
 	<div id="details">
@@ -14,6 +16,7 @@
 
 		<h2>{% trans "Your profile" %}</h2>
     <form method="post" action="/accounts/change_profile">
+    {% csrf_token %}
     	<table>
     		{{ basic_form.as_table }}
 			<tr><td colspan="2"><button type="submit">{% trans "Change profile" %}</button></td></tr>
@@ -22,6 +25,7 @@
 
 	<h2>{% trans "Password change" %}</h2>
 	<form method="post" action="/accounts/change_password">
+    {% csrf_token %}
     	<table>
     		{{ pass_form.as_table }}
 		<tr><td colspan="2"><button type="submit">{% trans "Change password" %}</button></td></tr>
@@ -30,7 +34,6 @@
 	</div>
 
 	<div id="services-list">
-		<h2>{% trans "Availble services" %}</h2>
 		<a href="http://redakcja.wolnelektury.pl/">
 			<img src="{{ MEDIA_URL }}static/platforma.png">
 		</a>

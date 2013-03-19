@@ -1,14 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Fundacja Nowoczesna Polska - CAS{% block subtitle %}{% endblock subtitle %}{% endblock title%}</title>
-		<link rel="stylesheet" href="{{ MEDIA_URL }}static/css/main.css"/>
+        <meta charset="utf-8" />
+        <title>{% block title %}Fundacja Nowoczesna Polska - Logowanie{% block subtitle %}{% endblock subtitle %}{% endblock title%}</title>
+        <link rel="stylesheet" href="{{ MEDIA_URL }}static/css/main.css"/>
         {% block extrahead %}
         {% endblock %}
     </head>
     <body>
-    <div id="content_wrap"><div id="content">{% block content %} {% endblock %}</div></div>
-    </body>
+    <div id="header-wrap">
+    <header>
+
+        <a href="/">
+            <img title="Fundacja Nowoczesna Polska"
+                alt="Fundacja Nowoczesna Polska"
+                src="http://turniej.wolnelektury.pl/static/img/fnp_black.png"></a>
+
+    </header>
+    </div>
+
+    <div id="content-wrap">
+    <div id="content">
+        {% block content %} {% endblock %}
+    </div>
+    </div>
+
 </html>

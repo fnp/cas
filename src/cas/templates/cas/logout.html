@@ -6,6 +6,9 @@ Logged out
 {% endblock %}
 
 {% block content %}
+
+<div class="enclose"><div class="enclosed">
+
     <h1>{% trans "Logged out" %}</h1>
 
     <p>{% blocktrans %}You have successfully logged out. To ensure that you are logged out of all services, please close your browser.{% endblocktrans %}</p>
@@ -14,8 +17,8 @@ Logged out
 	<p>{% blocktrans %}You can return to service you came from: <a href="{{ url }}">{{ url }}</a>{% endblocktrans %}</p>
 	{% endif %}
 
-	{% url cas_provider.views.login as login_url %}
+	{% url 'cas_login' as login_url %}
     <p>{% blocktrans %}You can also <a href="{{ login_url }}">login again</a>{% endblocktrans %}</p>
 
-	{% include "horizontal_footer.html" %}
+</div></div>
 {% endblock %}

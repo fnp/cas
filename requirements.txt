@@ -1,2 +1,6 @@
-Django>=1.1.1,<1.2
+Django>=1.5,<1.6
+South
 lxml>=2.2
+django-gravatar
+
+-e git+https://github.com/gstrat/django-cas-provider.git@330bf3e9e9b5c3bff6d9258b2fb81a08b7f81e31#egg=django-cas-provider
