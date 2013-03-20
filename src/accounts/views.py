@@ -6,12 +6,14 @@ from django.shortcuts import render
 from django.utils.translation import ugettext as __
 from django.views.decorators.http import require_POST
 from accounts.forms import UserBasicForm, UserPasswordForm
+from .models import Service
 
 @login_required
 def account_profile(request, basic_form=None, pass_form=None):
     return render(request, "account/profile.html", {
         "basic_form": basic_form or UserBasicForm(instance=request.user),
         "pass_form": pass_form or UserPasswordForm(),
+        "services": Service.objects.all(),
     })
 
 

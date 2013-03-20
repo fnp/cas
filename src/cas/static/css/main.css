@@ -1,12 +1,13 @@
 .enclose {
     text-align: center;
     min-height: 500px;
-    background: url(/media/static/brackets.png) no-repeat 50% 0;
+    background: url(../brackets.png) no-repeat 50% 0;
     margin-top: 1em;
+    background-size: auto 450px;
 }
 
 .enclosed {
-    margin-top: 7em;
+    margin-top: 70px;
     display: inline-block;
     text-align: left;
     max-width: 300px;
@@ -53,7 +54,7 @@ body {
     color: #989898;
 }
 header {
-    max-width: 960px;
+    max-width: 600px;
     margin: auto;
     padding: 1em 0;
 }
@@ -64,29 +65,17 @@ header img {
 footer, #content_push {
     height: 10em;
 }
-footer {
-
-}
-
-#content-wrap {
-}
 
 #content {
-    max-width: 960px;
+    max-width: 600px;
     margin: auto;
 }
-#content-inner {
-}
-
-
-
 
 
 #details {
 	margin: 1em;
 	float: left;
 	max-width: 75%;
-
 }
 
 #details form table th {
@@ -97,14 +86,20 @@ footer {
 	margin-bottom: 2em;
 }
 
-#details .message {
-    border: 2px solid green;
-    font-size: 2em;
+#details #messages {
+    background: white;
+    box-shadow: 0 0 10px black;
+    font-size: 1.75em;
     padding: 20px;
+    margin-bottom: 20px;
+}
+#details #messages p {
+    margin: 0;
+    color: green;
 }
 
 #details h2 {
-    margin-top: 40px;
+    margin-top: 0;
 }
 
 .user_avatar {
@@ -120,20 +115,15 @@ footer {
 
 #services-list {
     clear: both;
-    border-top: 1px solid red;
+    border-top: 1px solid black;
 }
 
-#services-list a {
-    
+#services-list h1 {
+    margin-bottom: 0;
 }
 
 #services-list img {
 	width: 90px;
     height: 50px;
 	margin: 10px 10px 0 0;
-}
-
-
-img.small_logo {
-	width: 250px;
 }

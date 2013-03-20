@@ -41,22 +41,28 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = PROJECT_ROOT + '/media/'
+MEDIA_ROOT = path.join(PROJECT_ROOT, '../../media/')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/admin-media/'
+STATIC_ROOT = path.join(PROJECT_ROOT, '../../static/')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    path.join(PROJECT_ROOT, 'static'),
+]
 
 ROOT_URLCONF = 'cas.urls'
 
 TEMPLATE_DIRS = (
     PROJECT_ROOT + '/templates',
+)
+
+LOCALE_PATHS = (
+    PROJECT_ROOT + '/locale',
 )
 
 INSTALLED_APPS = (
@@ -66,12 +72,24 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.staticfiles',
 
     'cas_provider',
     'gravatar',
     'south',
 
     'accounts',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages",
+    "django.core.context_processors.request",
 )
 
 # django-cas-provider settings

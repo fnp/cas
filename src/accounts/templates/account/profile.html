@@ -2,19 +2,21 @@
 {% load gravatar i18n %}
 
 {% block content %}
-	<div class="user_avatar">
+	<aside class="user_avatar">
 		<img src="{% gravatar_for_email request.user.email 120 %}"
             alt="Gravatar"
             title="{% trans 'Change at Gravatar.com' %}">
 		<p><a href="{% url 'cas_provider.views.logout' %}">{% trans "Logout" %}</a></p>
-	</div>
+	</aside>
 
 	<div id="details">
 		{% if messages %}
-			<p>{% for message in messages %}<span class="message">{{ message }}</span>{% endfor %}</p>
+            <section id="messages">
+                {% for message in messages %}<p>{{ message }}</p>{% endfor %}
+            </section>
     	{% endif %}
 
-		<h2>{% trans "Your profile" %}</h2>
+    <h2>{% trans "Your profile" %}</h2>
     <form method="post" action="/accounts/change_profile">
     {% csrf_token %}
     	<table>
@@ -33,9 +35,14 @@
 	</form>
 	</div>
 
-	<div id="services-list">
-		<a href="http://redakcja.wolnelektury.pl/">
-			<img src="{{ MEDIA_URL }}static/platforma.png">
-		</a>
-	</div>
+    {% if services %}
+	<section id="services-list">
+        <h1>{% trans "Sign in to:" %}</h1>
+        {% for service in services %}
+            <a href="{{ service.url }}" title="{{ service.name }}">
+                <img src="{{ service.image.url }}" alt="{{ service.name }}">
+            </a>
+        {% endfor %}
+	</section>
+    {% endif %}
 {% endblock %}
