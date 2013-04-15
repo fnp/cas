@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 16:32+0100\n"
-"PO-Revision-Date: 2013-03-20 16:35+0100\n"
+"POT-Creation-Date: 2013-04-15 11:11+0200\n"
+"PO-Revision-Date: 2013-04-15 11:11+0100\n"
 "Last-Translator: Radek Czajka <radoslaw.czajka@nowoczesnapolska.org.pl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -27,6 +27,14 @@ msgstr "Powtórzone hasło"
 #: forms.py:24
 msgid "Passwords do not match!"
 msgstr "Hasło i powtórzenie się nie zgadzają!"
+
+#: views.py:28
+msgid "Profile has been changed."
+msgstr "Profil został zmieniony."
+
+#: views.py:42
+msgid "Password has been changed."
+msgstr "Hasło zostało zmienione."
 
 #: templates/account/profile.html:8
 msgid "Change at Gravatar.com"

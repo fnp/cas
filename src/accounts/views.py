@@ -3,7 +3,7 @@ from django import http
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render
-from django.utils.translation import ugettext as __
+from django.utils.translation import ugettext as _
 from django.views.decorators.http import require_POST
 from accounts.forms import UserBasicForm, UserPasswordForm
 from .models import Service
@@ -24,7 +24,7 @@ def account_change_basic_profile(request):
 
     if form.is_valid():
         form.save()
-        messages.add_message(request, messages.INFO, __("Profile has been changed."))
+        messages.add_message(request, messages.INFO, _("Profile has been changed."))
         return http.HttpResponseRedirect('/accounts/')
 
     return account_profile(request, basic_form=form)
@@ -38,7 +38,7 @@ def account_change_password(request):
         request.user.set_password(form.cleaned_data['new_password'])
         request.user.save()
 
-        messages.add_message(request, messages.INFO, __("Password has been changed."))
+        messages.add_message(request, messages.INFO, _("Password has been changed."))
         return http.HttpResponseRedirect('/accounts/')
 
     return account_profile(request, pass_form=form)

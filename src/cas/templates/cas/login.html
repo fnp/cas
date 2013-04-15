@@ -8,9 +8,13 @@
     {% csrf_token %}
     <h1>{% trans "Login" %}</h1>
 
-	{% for error in errors %}
-	    <p>{{ error }}</p>
-	{% endfor %}
+    {% if errors %}
+        <ul class="errorlist">
+        {% for error in errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 
     {{ form.as_p }}
     <input type="submit" value="{% trans 'Log me in' %}" tabindex="10" />
