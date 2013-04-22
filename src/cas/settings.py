@@ -100,6 +100,7 @@ CAS_CUSTOM_ATTRIBUTES_CALLBACK = 'cas.utils.custom_attributes_callback'
 SESSION_COOKIE_NAME = 'fnpcas'
 
 GRAVATAR_DEFAULT_IMAGE = 'mm'
+GRAVATAR_URL_PREFIX = 'https://www.gravatar.com/'
 
 # Import localsettings file, which may override settings defined here
 try:
