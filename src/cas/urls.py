@@ -3,8 +3,10 @@ from django.conf.urls import include, patterns, url
 from django.views.generic import RedirectView
 from django.contrib import admin
 from django.conf import settings
+from django.views.defaults import page_not_found
 
 admin.autodiscover()
+
 
 urlpatterns = patterns('',
     url(r'^$', RedirectView.as_view(url='/accounts/')),
@@ -17,6 +19,10 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^accounts/', include('accounts.urls')),
+
+    url(r'^accounts/', include('accounts.urls')),
+    url(r'^auth/(email|signup|login|logout|confirm_email)', page_not_found),
+    url(r'^auth/', include('allauth.urls')),
 )
 
 

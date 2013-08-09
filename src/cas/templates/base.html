@@ -22,7 +22,19 @@
 
     <div id="content-wrap">
     <div id="content">
-        {% block content %} {% endblock %}
+        {% block content %}
+
+        <div class="enclose">
+        <div class="enclosed">
+            {% block content_enclosed %}
+            {% endblock %}
+        </div></div>
+
+        <div class="content-extra">
+            {% block content_extra %}
+            {% endblock %}
+        </div>
+        {% endblock %}
     </div>
     </div>
 

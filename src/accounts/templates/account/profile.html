@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-{% load gravatar i18n %}
+{% load libravatar_tags i18n %}
 
 {% block content %}
 	<aside class="user_avatar">
-		<img src="{% gravatar_for_email request.user.email 120 %}"
-            alt="Gravatar"
-            title="{% trans 'Change at Gravatar.com' %}">
+        <a href="https://avatars.nowoczesnapolska.org.pl/" title="{% trans 'How to change the avatar?' %}">
+		<img src="{% libravatar request.user.email 120 %}"
+            alt="Libravatar"></a>
 		<p><a href="{% url 'cas_provider.views.logout' %}">{% trans "Logout" %}</a></p>
+
+    <p><small><a href="{% url 'socialaccount_connections' %}">{% trans "Manage external accounts" %}</a></small></p>
 	</aside>
 
 	<div id="details">
@@ -26,14 +28,10 @@
 	</form>
 
 	<h2>{% trans "Password change" %}</h2>
-	<form method="post" action="/accounts/change_password">
-    {% csrf_token %}
-    	<table>
-    		{{ pass_form.as_table }}
-		<tr><td colspan="2"><button type="submit">{% trans "Change password" %}</button></td></tr>
-		</table>
-	</form>
+    <a href="{% url 'account_change_password' %}">Zmień hasło</a>
+
 	</div>
+
 
     {% if services %}
 	<section id="services-list">

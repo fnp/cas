@@ -62,10 +62,26 @@ TEMPLATE_DIRS = (
 )
 
 LOCALE_PATHS = (
+    PROJECT_ROOT + '/locale-contrib',
     PROJECT_ROOT + '/locale',
 )
 
 INSTALLED_APPS = (
+    'accounts',
+
+    'cas_provider',
+    'fnpdjango',
+    'honeypot',
+    'south',
+    'django_libravatar',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook', 
+    'allauth.socialaccount.providers.openid',
+    #'allauth.socialaccount.providers.persona',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -74,12 +90,17 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.staticfiles',
 
-    'cas_provider',
-    'gravatar',
-    'south',
-
-    'accounts',
 )
+
+MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'honeypot.middleware.HoneypotMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware'
+)
+
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
@@ -90,6 +111,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request",
+    "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount",
+    "cas.context_processors.settings",
+)
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
 )
 
 # django-cas-provider settings
@@ -99,8 +128,32 @@ LOGIN_REDIRECT_URL = '/accounts/'
 CAS_CUSTOM_ATTRIBUTES_CALLBACK = 'cas.utils.custom_attributes_callback'
 SESSION_COOKIE_NAME = 'fnpcas'
 
-GRAVATAR_DEFAULT_IMAGE = 'mm'
-GRAVATAR_URL_PREFIX = 'https://www.gravatar.com/'
+REGISTRATION_OPEN = True
+TEMPLATE_CONTEXT_SETTINGS = ('REGISTRATION_OPEN',)
+
+ACCOUNT_EMAIL_VERIFICATION = None
+SOCIALACCOUNT_AUTO_SIGNUP = False
+SOCIALACCOUNT_AVATAR_SUPPORT = False
+SOCIALACCOUNT_ADAPTER = 'cas.social.LooseSocialAccountAdapter'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'openid': {
+        'SERVERS': [
+            dict(id='google',
+                  name='Google',
+                  openid_url='https://www.google.com/accounts/o8/id')
+        ]
+    }
+}
+
+
+CONTRIB_LOCALE_APPS = [
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.openid',
+]
 
 # Import localsettings file, which may override settings defined here
 try:

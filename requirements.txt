@@ -3,6 +3,8 @@
 Django>=1.5,<1.6
 South
 lxml>=2.2
-django-gravatar
+django-honeypot
+django-allauth>=0.12,<0.13
+django-libravatar
 
 -e git+https://github.com/rczajka/django-cas-provider.git@bb0f7662eb12a838cbd339dd8b60476a73ec161b#egg=django-cas-provider

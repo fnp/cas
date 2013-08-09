@@ -7,24 +7,36 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 16:31+0100\n"
-"PO-Revision-Date: 2013-03-20 16:04+0100\n"
+"POT-Creation-Date: 2013-08-09 16:36+0200\n"
+"PO-Revision-Date: 2013-08-09 16:38+0100\n"
 "Last-Translator: Radek Czajka <radoslaw.czajka@nowoczesnapolska.org.pl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: templates/cas/login.html:9
 msgid "Login"
 msgstr "Zaloguj"
 
-#: templates/cas/login.html:16
+#: templates/cas/login.html:20
 msgid "Log me in"
 msgstr "Zaloguj mnie"
+
+#: templates/cas/login.html:25
+msgid "I forgot my password"
+msgstr "Nie pamiętam hasła"
+
+#: templates/cas/login.html:27
+msgid "Sign up"
+msgstr "Załóż konto"
+
+#: templates/cas/login.html:36
+msgid "Or login using:"
+msgstr "Albo zaloguj używając:"
 
 #: templates/cas/logout.html:5 templates/cas/logout.html.py:12
 msgid "Logged out"
@@ -48,3 +60,44 @@ msgstr "Możesz wrócić do serwisu: <a href=\"%(url)s\">%(url)s</a>."
 #, python-format
 msgid "You can also <a href=\"%(login_url)s\">login again</a>"
 msgstr "Możesz też <a href=\"%(login_url)s\">zalogować się ponownie</a>."
+
+#: templates/socialaccount/connections.html:6
+#: templates/socialaccount/connections.html:9
+msgid "Account Connections"
+msgstr "Połączenia konta"
+
+#: templates/socialaccount/connections.html:13
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr ""
+"Możesz zalogować się na swoje konto używając dowolnego z poniższych kont "
+"zewnętrznych:"
+
+#: templates/socialaccount/connections.html:39
+msgid "Remove"
+msgstr "Usuń"
+
+#: templates/socialaccount/connections.html:47
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr "Do Twojego konta nie są aktualnie podłączone żadne konta zewnętrzne."
+
+#: templates/socialaccount/connections.html:50
+msgid "Add a 3rd Party Account"
+msgstr "Dodaj konto zewnętrzne"
+
+#: templates/socialaccount/login_cancelled.html:5
+#: templates/socialaccount/login_cancelled.html:9
+msgid "Login Cancelled"
+msgstr "Logowanie anulowane"
+
+#: templates/socialaccount/login_cancelled.html:15
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your exisiting "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr ""
+"Logowanie przy użyciu Twojego konta zewnętrznego zostało anulowane. Jeśli to "
+"pomyłka, przejdź do <a href=\"%(login_url)s\">strony logowania</a>."

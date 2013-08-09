@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-15 11:11+0200\n"
-"PO-Revision-Date: 2013-04-15 11:11+0100\n"
+"POT-Creation-Date: 2013-08-01 11:06+0200\n"
+"PO-Revision-Date: 2013-08-01 11:11+0100\n"
 "Last-Translator: Radek Czajka <radoslaw.czajka@nowoczesnapolska.org.pl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: forms.py:15
 msgid "Your new password"
@@ -28,17 +28,17 @@ msgstr "Powtórzone hasło"
 msgid "Passwords do not match!"
 msgstr "Hasło i powtórzenie się nie zgadzają!"
 
-#: views.py:28
+#: views.py:32
 msgid "Profile has been changed."
 msgstr "Profil został zmieniony."
 
-#: views.py:42
+#: views.py:46
 msgid "Password has been changed."
 msgstr "Hasło zostało zmienione."
 
 #: templates/account/profile.html:8
-msgid "Change at Gravatar.com"
-msgstr "Zmień na Gravatar.com"
+msgid "Libravatar"
+msgstr "Libravatar"
 
 #: templates/account/profile.html:9
 msgid "Logout"
@@ -64,3 +64,128 @@ msgstr "Zmień hasło"
 msgid "Sign in to:"
 msgstr "Zaloguj do:"
 
+#: templates/account/register.html:5 templates/account/register.html.py:9
+msgid "Sign-up"
+msgstr "Zarejestruj"
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:9
+msgid "Password reset complete"
+msgstr "Hasło zostało zresetowane"
+
+#: templates/registration/password_reset_complete.html:11
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Twoje hasło zostało ustawione. Możesz się teraz zalogować."
+
+#: templates/registration/password_reset_complete.html:13
+msgid "Log in"
+msgstr "Zaloguj się"
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_done.html:7
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:8
+msgid "Password reset"
+msgstr "Zresetuj hasło"
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Enter new password"
+msgstr "Podaj nowe hasło"
+
+#: templates/registration/password_reset_confirm.html:12
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Podaj dwukrotnie nowe hasło, by można było zweryfikować, czy zostało wpisane "
+"poprawnie."
+
+#: templates/registration/password_reset_confirm.html:16
+msgid "New password:"
+msgstr "Nowe hasło:"
+
+#: templates/registration/password_reset_confirm.html:18
+msgid "Confirm password:"
+msgstr "Potwierdź hasło:"
+
+#: templates/registration/password_reset_confirm.html:19
+msgid "Change my password"
+msgstr "Zmień hasło"
+
+#: templates/registration/password_reset_confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr "Zresetowanie hasła nie powiodło się"
+
+#: templates/registration/password_reset_confirm.html:26
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Link do resetowania hasła był niepoprawny, być może dlatego, że został już "
+"raz użyty. Możesz ponownie zażądać zresetowania hasła."
+
+#: templates/registration/password_reset_done.html:6
+msgid "Home"
+msgstr "Początek"
+
+#: templates/registration/password_reset_done.html:11
+#: templates/registration/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "Hasło zmienione"
+
+#: templates/registration/password_reset_done.html:17
+msgid ""
+"We've emailed you instructions for setting your password to the email "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+"Wysłaliśmy Ci instrukcję odzyskiwania hasła na podany adres email. Wkrótce "
+"powinieneś/-naś ją otrzymać."
+
+#: templates/registration/password_reset_email.html:2
+msgid ""
+"You're receiving this email because you requested\n"
+"a password reset for your user account at Modern Poland Foundation."
+msgstr ""
+"Otrzymujesz tę wiadomość, ponieważ wybrałeś/-aś opcję\n"
+"odzyskiwania hasła w Fundacji Nowoczesna Polska."
+
+#: templates/registration/password_reset_email.html:5
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+"Aby wprowadzić nowe hasło, proszę przejść na stronę, której adres widnieje "
+"poniżej:"
+
+#: templates/registration/password_reset_email.html:9
+msgid "Your username, in case you've forgotten:"
+msgstr "Twoja nazwa użytkownika:"
+
+#: templates/registration/password_reset_email.html:11
+msgid "Thanks for using our services!"
+msgstr "Dziękujemy za korzystanie z naszych usług!"
+
+#: templates/registration/password_reset_email.html:13
+msgid "Modern Poland Foundation team"
+msgstr "Zespół Fundacji Nowoczesna Polska"
+
+#: templates/registration/password_reset_form.html:10
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"Zapomniałeś/-aś hasła? Podaj swój adres e-mail,\n"
+"a wyślemy Ci instrukcję ustawienia nowego."
+
+#: templates/registration/password_reset_form.html:14
+msgid "Email address:"
+msgstr "Adres e-mail:"
+
+#: templates/registration/password_reset_form.html:14
+msgid "Reset my password"
+msgstr "Zresetuj moje hasło"
+
+#: templates/registration/password_reset_subject.txt:2
+msgid "Password reset at Modern Poland Foundation"
+msgstr "Odzyskiwanie hasła w Fundacji Nowoczesna Polska"
+
+#~ msgid "Change at Gravatar.com"
+#~ msgstr "Zmień na Gravatar.com"

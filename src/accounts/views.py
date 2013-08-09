@@ -2,11 +2,16 @@
 from django import http
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils.translation import ugettext as _
 from django.views.decorators.http import require_POST
 from accounts.forms import UserBasicForm, UserPasswordForm
 from .models import Service
+from django.views.generic.edit import FormView
+from django.contrib.auth import login
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+
 
 @login_required
 def account_profile(request, basic_form=None, pass_form=None):
@@ -42,3 +47,14 @@ def account_change_password(request):
         return http.HttpResponseRedirect('/accounts/')
 
     return account_profile(request, pass_form=form)
+
+
+class Register(FormView):
+    form_class = UserCreationForm
+    template_name = "account/register.html"
+
+    def form_valid(self, form):
+        user = form.save()
+        user.backend='django.contrib.auth.backends.ModelBackend'
+        login(self.request, user)
+        return redirect('account_profile')

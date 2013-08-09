@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load account %}
 
-{% block content %}
+{% block content_enclosed %}
 
-<div class="enclose">
-  <form class="enclosed" id="login-form" action='{% url "cas_login" %}' method='post'>
+  <form id="login-form" action='{% url "cas_login" %}' method='post'>
     {% csrf_token %}
     <h1>{% trans "Login" %}</h1>
 
@@ -17,9 +17,33 @@
     {% endif %}
 
     {{ form.as_p }}
-    <input type="submit" value="{% trans 'Log me in' %}" tabindex="10" />
+    <p><input type="submit" value="{% trans 'Log me in' %}" tabindex="10" /></p>
 
   </form>
-</div>
 
+  <div id="tools">
+    <a href="{% url 'account_reset_password' %}">{% trans "I forgot my password" %}</a>
+    {% if settings.REGISTRATION_OPEN %}
+        <br/><a href="{% url 'account_register' %}">{% trans "Sign up" %}</a>
+    {% endif %}
+  </div>
+{% endblock %}
+
+
+{% block content_extra %}
+
+{% if socialaccount.providers  %}
+<p>{% trans "Or login using:" %}</p>
+<div class="socialaccount_ballot">
+
+  <ul class="socialaccount_providers">
+    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+  </ul>
+
+  <div></div>
+
+</div>
+{% include "socialaccount/snippets/login_extra.html" %}
+
+{% endif %}
 {% endblock %}

@@ -1,0 +1,660 @@
+# Polish translations for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-08-05 13:14+0200\n"
+"PO-Revision-Date: 2013-08-05 13:35+0100\n"
+"Last-Translator: Radek Czajka <radoslaw.czajka@nowoczesnapolska.org.pl>\n"
+"Language-Team: pl <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: allauth/account/adapter.py:167
+msgid "Usernames can only contain letters, digits and @/./+/-/_."
+msgstr "Login może zawierać tylko litery, cyfry i znaki @/./+/-/_."
+
+#: allauth/account/adapter.py:172
+msgid "Username can not be used. Please use other username."
+msgstr "Ta nazwa użytkownika nie może zostać użyta. Prosimy użyć innej."
+
+#: allauth/account/forms.py:33 allauth/account/forms.py:51
+#: allauth/account/forms.py:237 allauth/account/forms.py:343
+msgid "Password"
+msgstr "Hasło"
+
+#: allauth/account/forms.py:43
+msgid "Password must be a minimum of {0} characters."
+msgstr "Hasło musi składać się z co najmniej {0} znaków."
+
+#: allauth/account/forms.py:53
+msgid "Remember Me"
+msgstr "Zapamiętaj mnie"
+
+#: allauth/account/forms.py:64 allauth/account/forms.py:178
+msgid "E-mail address"
+msgstr "Adres e-mail"
+
+#: allauth/account/forms.py:65 allauth/account/forms.py:189
+#: allauth/account/forms.py:292 allauth/account/forms.py:360
+msgid "E-mail"
+msgstr "E-mail"
+
+#: allauth/account/forms.py:70 allauth/account/forms.py:71
+#: allauth/account/forms.py:171 allauth/account/forms.py:175
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: allauth/account/forms.py:78
+msgid "Username or e-mail"
+msgstr "Nazwa użytkownika lub e-mail."
+
+#: allauth/account/forms.py:111
+msgid "This account is currently inactive."
+msgstr "Konto jest nieaktywne."
+
+#: allauth/account/forms.py:115
+msgid "The e-mail address and/or password you specified are not correct."
+msgstr "Podany e-mail i/lub hasło są niepoprawne."
+
+#: allauth/account/forms.py:119
+msgid "The username and/or password you specified are not correct."
+msgstr "Nazwa użytkownika i/lub hasło są niepoprawne."
+
+#: allauth/account/forms.py:122
+msgid "The login and/or password you specified are not correct."
+msgstr "Podany login i/lub hasło są niepoprawne."
+
+#: allauth/account/forms.py:192
+msgid "E-mail (optional)"
+msgstr "E-mail (opcjonalnie)"
+
+#: allauth/account/forms.py:207
+msgid "This username is already taken. Please choose another."
+msgstr "Ta nazwa użytkownika jest zajęta. Proszę wybrać inną."
+
+#: allauth/account/forms.py:216
+msgid "A user is already registered with this e-mail address."
+msgstr "Istnieje już użytkownik o tym adresie e-mail."
+
+#: allauth/account/forms.py:238 allauth/account/forms.py:344
+msgid "Password (again)"
+msgstr "Hasło (ponownie)"
+
+#: allauth/account/forms.py:256 allauth/account/forms.py:333
+#: allauth/account/forms.py:349 allauth/account/forms.py:418
+msgid "You must type the same password each time."
+msgstr "Proszę wpisać dwa razy to samo hasło."
+
+#: allauth/account/forms.py:301
+msgid "This e-mail address is already associated with this account."
+msgstr "Ten adres e-mail jest już używany przez to konto."
+
+#: allauth/account/forms.py:302
+msgid "This e-mail address is already associated with another account."
+msgstr "Ten adres e-mail jest już używany przez inne konto."
+
+#: allauth/account/forms.py:321
+msgid "Current Password"
+msgstr "Aktualne hasło"
+
+#: allauth/account/forms.py:322 allauth/account/forms.py:406
+msgid "New Password"
+msgstr "Nowe hasło"
+
+#: allauth/account/forms.py:323 allauth/account/forms.py:407
+msgid "New Password (again)"
+msgstr "Nowe hasło (ponownie)"
+
+#: allauth/account/forms.py:327
+msgid "Please type your current password."
+msgstr "Proszę wpisać swoje aktualne hasło."
+
+#: allauth/account/forms.py:371
+msgid "The e-mail address is not assigned to any user account"
+msgstr "Ten adres e-mail nie jest używany przez żadne konto."
+
+#: allauth/account/models.py:31
+msgid "email address"
+msgstr "adres e-mail"
+
+#: allauth/account/models.py:32
+msgid "email addresses"
+msgstr "adresy e-mail"
+
+#: allauth/account/models.py:82
+msgid "email confirmation"
+msgstr "potwierdzenie adresu e-mail"
+
+#: allauth/account/models.py:83
+msgid "email confirmations"
+msgstr "potwierdzenia adresów e-mail"
+
+#: allauth/account/utils.py:290
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s"
+msgstr "E-mail potwierdzający wysłany do %(email)s"
+
+#: allauth/socialaccount/adapter.py:74
+msgid "Your account has no password set up."
+msgstr "Twoje konto nie ma ustawionego hasła."
+
+#: allauth/socialaccount/adapter.py:78
+msgid "Your account has no verified e-mail address."
+msgstr "Twoje konto nie ma potwierdzonego adresu e-mail."
+
+#: allauth/socialaccount/providers/oauth/client.py:78
+#, python-format
+msgid "Invalid response while obtaining request token from \"%s\"."
+msgstr ""
+
+#: allauth/socialaccount/providers/oauth/client.py:102
+#, python-format
+msgid "Invalid response while obtaining access token from \"%s\"."
+msgstr ""
+
+#: allauth/socialaccount/providers/oauth/client.py:115
+#, python-format
+msgid "No request token saved for \"%s\"."
+msgstr ""
+
+#: allauth/socialaccount/providers/oauth/client.py:159
+#, python-format
+msgid "No access token saved for \"%s\"."
+msgstr ""
+
+#: allauth/socialaccount/providers/oauth/client.py:177
+#, python-format
+msgid "No access to private resources at \"%s\"."
+msgstr ""
+
+#: allauth/templates/account/email.html:6
+msgid "Account"
+msgstr "Konto"
+
+#: allauth/templates/account/email.html:9
+msgid "E-mail Addresses"
+msgstr "Adresy e-mail"
+
+#: allauth/templates/account/email.html:11
+msgid "The following e-mail addresses are associated with your account:"
+msgstr "Z Twoim kontem są związane następujące adresy e-mail:"
+
+#: allauth/templates/account/email.html:25
+msgid "Verified"
+msgstr "Potwierdzony"
+
+#: allauth/templates/account/email.html:27
+msgid "Unverified"
+msgstr "Nie potwierdzony"
+
+#: allauth/templates/account/email.html:29
+msgid "Primary"
+msgstr "Główny"
+
+#: allauth/templates/account/email.html:35
+msgid "Make Primary"
+msgstr "Ustaw jako główny"
+
+#: allauth/templates/account/email.html:36
+msgid "Re-send Verification"
+msgstr "Ponownie prześlij link potwierdzający"
+
+#: allauth/templates/account/email.html:37
+#: allauth/templates/socialaccount/connections.html:35
+msgid "Remove"
+msgstr "Usuń"
+
+#: allauth/templates/account/email.html:44
+msgid "Warning:"
+msgstr "Uwaga:"
+
+#: allauth/templates/account/email.html:44
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+"Nie masz ustawionego żadnego adresu e-mail. Dodanie adresu e-mail umożliwi "
+"otrzymywanie powiadomień, odzyskanie konta w przypadku utraty hasła itp.."
+
+#: allauth/templates/account/email.html:49
+msgid "Add E-mail Address"
+msgstr "Dodaj adres e-mail"
+
+#: allauth/templates/account/email.html:54
+msgid "Add E-mail"
+msgstr "Dodaj e-mail"
+
+#: allauth/templates/account/email.html:63
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr "Czy na pewno usunąć wybrany adres e-mail?"
+
+#: allauth/templates/account/email_confirm.html:7
+#: allauth/templates/account/email_confirm.html:11
+#: allauth/templates/account/email_confirmed.html:6
+#: allauth/templates/account/email_confirmed.html:11
+#: allauth/templates/account/email/email_confirmation_subject.txt:3
+msgid "Confirm E-mail Address"
+msgstr "Potwierdź adres e-mail"
+
+#: allauth/templates/account/email_confirm.html:17
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+"Proszę potwierdzić adres <a href=\"mailto:%(email)s\">%(email)s</a> jako e-"
+"mail użytkownika %(user_display)s."
+
+#: allauth/templates/account/email_confirm.html:21
+msgid "Confirm"
+msgstr "Potwierdź"
+
+#: allauth/templates/account/email_confirm.html:28
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"Ten link z wiadomości e-mail jest nieprawidłowy lub nieaktualny. Możesz <a "
+"href=\"%(email_url)s\">zamówić kolejny link weryfikacyjny</a>."
+
+#: allauth/templates/account/email_confirmed.html:15
+#, python-format
+msgid ""
+"You have confirmed that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-"
+"mail address for user %(user_display)s."
+msgstr ""
+"Adres <a href=\"mailto:%(email)s\">%(email)s</a> został właśnie powierdzony "
+"jako e-mail dla użytkownika %(user_display)s."
+
+#: allauth/templates/account/login.html:7
+#: allauth/templates/account/login.html:11
+#: allauth/templates/account/login.html:39
+msgid "Sign In"
+msgstr "Zaloguj"
+
+#: allauth/templates/account/login.html:16
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
+"up</a> \n"
+"for a %(site_name)s account and sign in below:"
+msgstr ""
+"Zaloguj za pomocą konta zewnętrznego, albo <a \n"
+"href=\"%(signup_url)s\">zarejestruj się</a> w serwisie %(site_name)s i "
+"zaloguj poniżej:"
+
+#: allauth/templates/account/login.html:24
+msgid "or"
+msgstr "lub"
+
+#: allauth/templates/account/login.html:38
+msgid "Forgot Password?"
+msgstr "Nie pamiętasz hasła?"
+
+#: allauth/templates/account/logout.html:6
+#: allauth/templates/account/logout.html:9
+#: allauth/templates/account/logout.html:18
+msgid "Sign Out"
+msgstr "Wylogowano"
+
+#: allauth/templates/account/logout.html:11
+msgid "Are you sure you want to sign out?"
+msgstr "Czy na pewno chcesz się wylogować?"
+
+#: allauth/templates/account/password_change.html:4
+#: allauth/templates/account/password_change.html:7
+#: allauth/templates/account/password_change.html:12
+#: allauth/templates/account/password_reset_from_key.html:5
+#: allauth/templates/account/password_reset_from_key.html:8
+msgid "Change Password"
+msgstr "Zmień hasło"
+
+#: allauth/templates/account/password_delete.html:5
+#: allauth/templates/account/password_delete.html:8
+msgid "Delete Password"
+msgstr "Usuń hasło"
+
+#: allauth/templates/account/password_delete.html:9
+msgid ""
+"You may delete your password since you are currently logged in using OpenID."
+msgstr "Możesz usunąć hasło, ponieważ jesteś zalogowany/-a za pomocą OpenID."
+
+#: allauth/templates/account/password_delete.html:12
+msgid "delete my password"
+msgstr "usuń moje hasło"
+
+#: allauth/templates/account/password_delete_done.html:5
+#: allauth/templates/account/password_delete_done.html:8
+msgid "Password Deleted"
+msgstr "Hasło usunięte"
+
+#: allauth/templates/account/password_delete_done.html:9
+msgid "Your password has been deleted."
+msgstr "Twoje hasło zostało usunięte."
+
+#: allauth/templates/account/password_reset.html:6
+#: allauth/templates/account/password_reset.html:10
+#: allauth/templates/account/password_reset_done.html:6
+#: allauth/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr "Odzyskiwanie hasła"
+
+#: allauth/templates/account/password_reset.html:15
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"Nie pamiętasz swojego hasła? Wpisz adres e-mail, a wyślemy Ci e-mail "
+"umożliwiający zresetowanie go."
+
+#: allauth/templates/account/password_reset.html:20
+msgid "Reset My Password"
+msgstr "Odzyskaj hasło"
+
+#: allauth/templates/account/password_reset.html:23
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Prosimy o kontakt w przypadku problemów z uzyskaniem nowego hasła."
+
+#: allauth/templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"E-mail został wysłany. Prosimy o kontakt, jeśli wiadomość nie dotrze w ciągu "
+"kilku minut."
+
+#: allauth/templates/account/password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr "Błędny klucz"
+
+#: allauth/templates/account/password_reset_from_key.html:12
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"Link resetujący hasło jest nieprawidłowy, być może ponieważ został już "
+"wcześniej użyty. Spróbuj <a href=\"%(passwd_reset_url)s\">zresetować hasło "
+"ponownie</a>."
+
+#: allauth/templates/account/password_reset_from_key.html:18
+msgid "change password"
+msgstr "zmień hasło"
+
+#: allauth/templates/account/password_reset_from_key.html:21
+msgid "Your password is now changed."
+msgstr "Hasło zostało zmienione."
+
+#: allauth/templates/account/password_set.html:5
+#: allauth/templates/account/password_set.html:8
+#: allauth/templates/account/password_set.html:13
+msgid "Set Password"
+msgstr "Ustaw hasło"
+
+#: allauth/templates/account/signup.html:6
+#: allauth/templates/socialaccount/signup.html:5
+msgid "Signup"
+msgstr "Rejestracja"
+
+#: allauth/templates/account/signup.html:9
+#: allauth/templates/account/signup.html:19
+#: allauth/templates/socialaccount/signup.html:8
+#: allauth/templates/socialaccount/signup.html:19
+msgid "Sign Up"
+msgstr "Zarejestruj się"
+
+#: allauth/templates/account/signup.html:11
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr "Masz już konto? <a href=\"%(login_url)s\">Zaloguj się</a>."
+
+#: allauth/templates/account/signup_closed.html:6
+#: allauth/templates/account/signup_closed.html:9
+msgid "Sign Up Closed"
+msgstr "Rejestracja zamknięta"
+
+#: allauth/templates/account/signup_closed.html:11
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "Przepraszamy, ale rejestracja jest obecnie zamknięta."
+
+#: allauth/templates/account/verification_sent.html:5
+#: allauth/templates/account/verification_sent.html:8
+#: allauth/templates/account/verified_email_required.html:6
+#: allauth/templates/account/verified_email_required.html:9
+msgid "Verify Your E-mail Address"
+msgstr "Potwierdź swój adres e-mail"
+
+#: allauth/templates/account/verification_sent.html:10
+#, python-format
+msgid ""
+"We have sent an e-mail to <a href=\"mailto:%(email)s\">%(email)s</a> for "
+"verification. Follow the link provided to finalize the signup process. "
+"Please contact us if you do not receive it within a few minutes."
+msgstr ""
+"Na podany adres e-mail <a href=\"mailto:%(email)s\">%(email)s</a> została "
+"wysłana wiadomość w celu weryfikacji. Proszę kliknąć w podany w tej "
+"wiadomości link w celu zakończenia procesu rejestracji. Prosimy o kontakt, "
+"jeśli wiadomość nie dotrze w ciągu kilku minut."
+
+#: allauth/templates/account/verified_email_required.html:15
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+"W celu korzystania z tej części strony wymagamy\n"
+"potwierdzenia tożsamości. W tym celu konieczne jest\n"
+"potwierdzenie adresu e-mail. "
+
+#: allauth/templates/account/verified_email_required.html:19
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+"Na podany adres została wysłana wiadomość w celu\n"
+"weryfikacji. Proszę kliknąć na link wewnątrz tej wiadomości. Prosimy\n"
+"o kontakt, jeśli wiadomość nie dotrze w ciągu kilku minut."
+
+#: allauth/templates/account/verified_email_required.html:21
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+"<strong>Uwaga:</strong> nadal możesz <a href=\"%(email_url)s\">zmienić swój "
+"adres e-mail</a>."
+
+#: allauth/templates/account/email/email_confirmation_message.txt:4
+#, python-format
+msgid ""
+"User %(user_display)s at %(site_name)s has given this as an email address.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s\n"
+msgstr ""
+"Użytkownik '%(user_display)s' podał ten adres e-mail na stronie  "
+"%(site_name)s.\n"
+"\n"
+"Aby go potwierdzić, przejdź do %(activate_url)s\n"
+
+#: allauth/templates/account/email/password_reset_key_message.txt:9
+#, python-format
+msgid ""
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account at %(site_domain)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password.\n"
+"\n"
+"%(password_reset_url)s\n"
+"\n"
+"In case you forgot, your username is %(username)s.\n"
+"\n"
+"Thanks for using our site!\n"
+msgstr ""
+"Otrzymujesz tego e-maila, ponieważ zostaliśmy poproszeni o zresetowanie "
+"hasła dla konta w serwisie %(site_domain)s.\n"
+"Możesz go zignorować, jeśli prośba nie pochodzi od Ciebie. Wejdź pod "
+"poniższy link, aby zresetować swoje hasło.\n"
+"\n"
+"%(password_reset_url)s\n"
+"\n"
+"W razie czego, Twój login to: %(username)s.\n"
+"\n"
+"Dziękujemy za korzystanie z naszych serwisów!\n"
+
+#: allauth/templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr "E-mail resetujący hasło"
+
+#: allauth/templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr "Nie można usunąć głównego adresu e-mail (%(email)s)."
+
+#: allauth/templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr "E-mail potwierdzający wysłany do %(email)s."
+
+#: allauth/templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr "Adres %(email)s został potwierdzony."
+
+#: allauth/templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr "Usunięto adres e-mail %(email)s."
+
+#: allauth/templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr "Zalogowano jako  %(name)s."
+
+#: allauth/templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr "Wylogowano."
+
+#: allauth/templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr "Hasło zostało zmienione."
+
+#: allauth/templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr "Hasło zostało ustawione."
+
+#: allauth/templates/account/messages/primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr "Ustawiono główny adres e-mail."
+
+#: allauth/templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr "Główny adres e-mail musi zostać potwierdzony."
+
+#: allauth/templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr "Zwróć uwagę"
+
+#: allauth/templates/account/snippets/already_logged_in.html:5
+#, python-format
+msgid "you are already logged in as %(user_display)s."
+msgstr "jesteś już zalogowany/-a jako %(user_display)s."
+
+#: allauth/templates/openid/login.html:10
+msgid "OpenID Sign In"
+msgstr "Logowanie przy użyciu OpenID"
+
+#: allauth/templates/socialaccount/account_inactive.html:5
+#: allauth/templates/socialaccount/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "Konto nieaktywne"
+
+#: allauth/templates/socialaccount/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "To konto jest nieaktywne."
+
+#: allauth/templates/socialaccount/authentication_error.html:5
+#: allauth/templates/socialaccount/authentication_error.html:8
+msgid "Social Network Login Failure"
+msgstr "Błąd podczas logowania przy użyciu sieci społecznościowej."
+
+#: allauth/templates/socialaccount/authentication_error.html:10
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+"Podczas próby zalogowania za pośrednictwej konta w sieci społecznościowej "
+"wystąpił błąd."
+
+#: allauth/templates/socialaccount/connections.html:5
+#: allauth/templates/socialaccount/connections.html:8
+msgid "Account Connections"
+msgstr "Powiązania konta"
+
+#: allauth/templates/socialaccount/connections.html:11
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr ""
+"Możesz zalogować się na swoje konto używając następujących kont zewnętrznych:"
+
+#: allauth/templates/socialaccount/connections.html:43
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+"Aktualnie do Twojego konta nie są podłączone żadne konta w sieciach "
+"społecznościowych."
+
+#: allauth/templates/socialaccount/connections.html:46
+msgid "Add a 3rd Party Account"
+msgstr "Dodaj konto zewnętrzne"
+
+#: allauth/templates/socialaccount/login_cancelled.html:6
+#: allauth/templates/socialaccount/login_cancelled.html:10
+msgid "Login Cancelled"
+msgstr "Logowanie anulowane"
+
+#: allauth/templates/socialaccount/login_cancelled.html:14
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr ""
+"Logowanie do serwisu za pomocą istniejącego konta zostało anulowane. Jeśli "
+"był to błąd, przejdź do <a href=\"%(login_url)s\">strony logowania</a>."
+
+#: allauth/templates/socialaccount/signup.html:11
+#, python-format
+msgid ""
+"You are about to use your %(provider_name)s account to login to \n"
+"%(site_name)s. As a final step, please complete the following form:"
+msgstr ""
+"Za chwilę użyjesz konta w serwisie %(provider_name)s aby zalogować się \n"
+"do serwisu %(site_name)s. Zanim to nastąpi, wypełnij proszę ten krótki "
+"formularz:"
+
+#: allauth/templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr "Konto społecznościowe zostało dołączone."
+
+#: allauth/templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr "To konto społecznościowe jest już dołączone do innego konta."
+
+#: allauth/templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr "Konto społecznościowe zostało odłączone."
