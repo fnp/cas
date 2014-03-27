@@ -1,8 +1,8 @@
 -i http://pypi.nowoczesnapolska.org.pl/simple
 
-Django>=1.5,<1.6
+Django>=1.6,<1.7
 South
 lxml>=2.2
-django-gravatar
+django-gravatar2
 
--e git+https://github.com/rczajka/django-cas-provider.git@bb0f7662eb12a838cbd339dd8b60476a73ec161b#egg=django-cas-provider
+-e git+https://github.com/rczajka/django-cas-provider.git@1d2632a20124e8d08a234486e3c2da81b23d5734#egg=django-cas-provider

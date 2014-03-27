@@ -75,7 +75,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'cas_provider',
-    'gravatar',
+    'django_gravatar',
     'south',
 
     'accounts',

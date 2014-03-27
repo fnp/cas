@@ -3,7 +3,7 @@
 
 {% block content %}
 	<aside class="user_avatar">
-		<img src="{% gravatar_for_email request.user.email 120 %}"
+		<img src="{% gravatar_url request.user.email 120 %}"
             alt="Gravatar"
             title="{% trans 'Change at Gravatar.com' %}">
 		<p><a href="{% url 'cas_provider.views.logout' %}">{% trans "Logout" %}</a></p>
