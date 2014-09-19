@@ -76,9 +76,17 @@ INSTALLED_APPS = (
 
     'cas_provider',
     'django_gravatar',
-    'south',
 
     'accounts',
+)
+
+MIDDLEWARE_CLASSES = (
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -104,6 +112,6 @@ GRAVATAR_URL_PREFIX = 'https://www.gravatar.com/'
 
 # Import localsettings file, which may override settings defined here
 try:
-    from localsettings import *
+    from .localsettings import *
 except ImportError:
     pass
