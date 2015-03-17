@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-from django.conf.urls import patterns, url
+from django.conf.urls import url
+from . import views
 
-urlpatterns = patterns('accounts.views',
-    url(r'^$', 'account_profile'),
-    url(r'^change_profile$', 'account_change_basic_profile'),
-    url(r'^change_password$', 'account_change_password'),
-)
+urlpatterns = [
+    url(r'^$', views.account_profile),
+    url(r'^change_profile$', views.account_change_basic_profile),
+    url(r'^change_password$', views.account_change_password),
+]

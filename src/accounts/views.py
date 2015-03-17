@@ -1,6 +1,7 @@
 # Create your views here.
 from django import http
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
 from django.contrib import messages
 from django.shortcuts import render
 from django.utils.translation import ugettext as _
@@ -37,6 +38,7 @@ def account_change_password(request):
     if form.is_valid():
         request.user.set_password(form.cleaned_data['new_password'])
         request.user.save()
+        update_session_auth_hash(request, request.user)
 
         messages.add_message(request, messages.INFO, _("Password has been changed."))
         return http.HttpResponseRedirect('/accounts/')

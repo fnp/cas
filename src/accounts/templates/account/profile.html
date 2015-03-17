@@ -6,7 +6,7 @@
 		<img src="{% gravatar_url request.user.email 120 %}"
             alt="Gravatar"
             title="{% trans 'Change at Gravatar.com' %}">
-		<p><a href="{% url 'cas_provider.views.logout' %}">{% trans "Logout" %}</a></p>
+		<p><a href="{% url 'cas_logout' %}">{% trans "Logout" %}</a></p>
 	</aside>
 
 	<div id="details">
