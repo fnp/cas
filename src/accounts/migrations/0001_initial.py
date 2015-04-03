@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('ordering', models.IntegerField()),
                 ('name', models.CharField(max_length=255)),
                 ('url', models.URLField()),
-                ('image', models.ImageField(upload_to=b'accounts/service/')),
+                ('image', models.ImageField(upload_to='accounts/service/')),
             ],
             options={
                 'ordering': ('ordering',),
