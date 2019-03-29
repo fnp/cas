@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.urls import path, include
 from django.views.generic import RedirectView
 from django.contrib import admin
@@ -17,6 +16,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('accounts/', include('accounts.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
 ]
 
 

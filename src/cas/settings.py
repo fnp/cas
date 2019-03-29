@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from os import path
 
 PROJECT_ROOT = path.realpath(path.dirname(__file__))
@@ -84,6 +83,11 @@ LOCALE_PATHS = (
 )
 
 INSTALLED_APPS = (
+    'accounts',
+
+    'cas_provider',
+    'django_gravatar',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -91,11 +95,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.staticfiles',
-
-    'cas_provider',
-    'django_gravatar',
-
-    'accounts',
 )
 
 MIDDLEWARE = (

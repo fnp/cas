@@ -1,18 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 .enclose {
-    text-align: center;
-    min-height: 500px;
-    background: url(../brackets.png) no-repeat 50% 0;
-    margin-top: 1em;
+    height: 450px;
+    background: url("../brackets.png") no-repeat 50% 0;
+    margin: 1em 0;
     background-size: auto 450px;
+    display: flex;
+    flex-direction: column;
 }
 
 .enclosed {
-    margin-top: 70px;
-    display: inline-block;
-    text-align: left;
     max-width: 300px;
-    background-color: rgb(247, 247, 247);
-    background-color: rgba(247, 247, 247, .5);
+    margin: auto;
 }
 
 a {
@@ -30,25 +31,31 @@ a:hover {
 }
 
 
-form p {
-    margin: 0;
-}
-form label, form input {
+form label, form input, form button {
     display: block;
     width: 100%;
 }
-#login-form input {
+
+.enclosed input {
     font-size: 1.75em;
     margin-bottom: .4em;
+    width: 100%;
 }
-
-
-
-
+.enclosed button {
+    font-size: 1.75em;
+    width: 100%;
+    margin-bottom: 0;
+}
+.enclosed p {
+    margin-bottom: 0;
+}
+h1 {
+    font-size: 1.75em;
+    margin: 0 0 16px;
+}
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 body {
     background-color: #F7F7F7;
@@ -78,11 +85,9 @@ footer, #content_push {
     margin: auto;
 }
 
-
 #details {
-	margin: 1em;
-	float: left;
-	max-width: 75%;
+    margin: 1em 0;
+    padding: 0 2em;
 }
 
 #details form table th {
@@ -105,32 +110,26 @@ footer, #content_push {
     color: green;
 }
 
-#details h2 {
-    margin-top: 0;
+.menu {
+    margin: 1em 0;
+    text-align: center;
+}
+.menu .active {
+    font-weight: bold;
+    color: black;
+}
+@media screen and (min-width: 620px) {
+    .menu {
+        float: left;
+        max-width: 20%;
+    }
+
+    #details {
+        float: right;
+        width: 80%;
+    }
 }
 
-.user_avatar {
-	float: left;
-	margin: 1em;
-	max-width: 20%;
-	text-align: center;
-}
-
-.user_avatar img {
+.menu img {
     box-shadow: 0 0 .2em black;
-}
-
-#services-list {
-    clear: both;
-    border-top: 1px solid black;
-}
-
-#services-list h1 {
-    margin-bottom: 0;
-}
-
-#services-list img {
-	width: 90px;
-    height: 50px;
-	margin: 10px 10px 0 0;
 }

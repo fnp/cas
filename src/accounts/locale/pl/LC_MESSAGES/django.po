@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-29 14:19+0100\n"
+"PO-Revision-Date: 2019-03-29 14:15+0100\n"
+"Last-Translator: Radek Czajka <radoslaw.czajka@nowoczesnapolska.org.pl>\n"
+"Language-Team: \n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: templates/account/base.html:8
+msgid "Change at Gravatar.com"
+msgstr "Zmień na Gravatar.com"
+
+#: templates/account/base.html:10 templates/account/profile.html:5
+#: templates/account/profile.html:16
+msgid "Your profile"
+msgstr "Twój profil"
+
+#: templates/account/base.html:11
+#: templates/registration/password_change_done.html:14
+msgid "Password change"
+msgstr ""
+
+#: templates/account/base.html:12
+msgid "E-mail"
+msgstr "E-mail"
+
+#: templates/account/base.html:13
+msgid "SSH keys"
+msgstr "Klucze SSH"
+
+#: templates/account/base.html:15
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: templates/account/profile.html:20
+msgid "Change profile"
+msgstr "Zmień profil"
+
+#: templates/registration/password_change_done.html:15
+msgid "Your password was changed."
+msgstr ""
+
+#: templates/registration/password_change_form.html:22
+msgid "Please correct the error below."
+msgstr ""
+
+#: templates/registration/password_change_form.html:24
+msgid "Please correct the errors below."
+msgstr ""
+
+#: templates/registration/password_change_form.html:29
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: templates/registration/password_change_form.html:34
+#: templates/registration/password_reset_confirm.html:20
+msgid "Change my password"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:13
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:15
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:15
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:24
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:14
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:16
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/registration/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:12
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:16
+msgid "Reset my password"
+msgstr ""
+
+#: views.py:18
+msgid "Profile has been changed."
+msgstr "Profil został zmieniony."

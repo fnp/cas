@@ -19,6 +19,10 @@
     {{ form.as_p }}
     <input type="submit" value="{% trans 'Log me in' %}" tabindex="10" />
 
+    <div style="text-align: right">
+      <a href="{% url 'password_reset' %}">{% trans "Forgot password?" %}</a>
+    </div>
+
   </form>
 </div>
 

@@ -1,48 +1,22 @@
-{% extends "base.html" %}
-{% load gravatar i18n %}
+{% extends "account/base.html" %}
+{% load i18n %}
 
-{% block content %}
-	<aside class="user_avatar">
-		<img src="{% gravatar_url request.user.email 120 %}"
-            alt="Gravatar"
-            title="{% trans 'Change at Gravatar.com' %}">
-		<p><a href="{% url 'cas_logout' %}">{% trans "Logout" %}</a></p>
-	</aside>
 
-	<div id="details">
-		{% if messages %}
-            <section id="messages">
-                {% for message in messages %}<p>{{ message }}</p>{% endfor %}
-            </section>
-    	{% endif %}
+{% block title %}{% trans "Your profile" %}{% endblock %}
 
-    <h2>{% trans "Your profile" %}</h2>
-    <form method="post" action="/accounts/change_profile">
+
+{% block menu %}
+  {% with menu="profile" %}
+    {{ block.super }}
+  {% endwith %}
+{% endblock %}
+
+
+{% block accounts-content %}
+  <h1>{% trans "Your profile" %}</h1>
+  <form method="post">
     {% csrf_token %}
-    	<table>
-    		{{ basic_form.as_table }}
-			<tr><td colspan="2"><button type="submit">{% trans "Change profile" %}</button></td></tr>
-		</table>
-	</form>
-
-	<h2>{% trans "Password change" %}</h2>
-	<form method="post" action="/accounts/change_password">
-    {% csrf_token %}
-    	<table>
-    		{{ pass_form.as_table }}
-		<tr><td colspan="2"><button type="submit">{% trans "Change password" %}</button></td></tr>
-		</table>
-	</form>
-	</div>
-
-    {% if services %}
-	<section id="services-list">
-        <h1>{% trans "Sign in to:" %}</h1>
-        {% for service in services %}
-            <a href="{{ service.url }}" title="{{ service.name }}">
-                <img src="{{ service.image.url }}" alt="{{ service.name }}">
-            </a>
-        {% endfor %}
-	</section>
-    {% endif %}
+    {{ form.as_p }}
+    <p><button type="submit">{% trans "Change profile" %}</button></p>
+  </form>
 {% endblock %}
