@@ -118,6 +118,8 @@ SESSION_COOKIE_NAME = 'fnpcas'
 GRAVATAR_DEFAULT_IMAGE = 'mm'
 GRAVATAR_URL_PREFIX = 'https://www.gravatar.com/'
 
+SITE_TITLE = 'Fundacja Nowoczesna Polska'
+
 # Import localsettings file, which may override settings defined here
 try:
     from .localsettings import *

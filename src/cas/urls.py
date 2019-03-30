@@ -3,7 +3,9 @@ from django.views.generic import RedirectView
 from django.contrib import admin
 from django.conf import settings
 
-admin.autodiscover()
+
+admin.site.site_header = settings.SITE_TITLE
+
 
 urlpatterns = [
     path('', RedirectView.as_view(url='/accounts/', permanent=False)),
