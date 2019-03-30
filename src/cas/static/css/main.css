@@ -31,7 +31,7 @@ a:hover {
 }
 
 
-form label, form input, form button {
+label, input, button, textarea {
     display: block;
     width: 100%;
 }

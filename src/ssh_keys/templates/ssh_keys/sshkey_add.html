@@ -1,0 +1,15 @@
+{% extends 'ssh_keys/base.html' %}
+{% load i18n %}
+
+
+{% block accounts-content %}
+<h1>{% trans "Add SSH key" %}</h1>
+
+<form method='post'>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type='submit'>
+    {% trans "Add" %}
+  </button>
+</form>
+{% endblock %}

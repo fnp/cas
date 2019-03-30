@@ -84,6 +84,8 @@ LOCALE_PATHS = (
 
 INSTALLED_APPS = (
     'accounts',
+    'services',
+    'ssh_keys',
 
     'cas_provider',
     'django_gravatar',

@@ -1,0 +1,4 @@
+{% for user in service.all_users %}# {{ user }}
+{% for key in user.sshkey_set.all %}{{ key.key }}
+{% endfor %}
+{% endfor %}

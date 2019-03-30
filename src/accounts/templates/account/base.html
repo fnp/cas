@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load gravatar i18n %}
+{% load use_ssh from services %}
 
 {% block content %}
   <aside class="menu">
@@ -10,7 +11,10 @@
       <p><a {% if menu == 'profile' %}class="active"{% endif %} href="{% url 'accounts_profile' %}">{% trans "Your profile" %}</a></p>
       <p><a {% if menu == 'password' %}class="active"{% endif %} href="{% url 'password_change' %}">{% trans "Password change" %}</a></p>
       <!--p><a {% if menu == 'email' %}class="active"{% endif %} href="">{% trans "E-mail" %}</a></p-->
-      <!--p><a {% if menu == 'ssh' %}class="active"{% endif %} href="">{% trans "SSH keys" %}</a></p-->
+      {% use_ssh as use_ssh %}
+      {% if use_ssh %}
+        <p><a {% if menu == 'ssh' %}class="active"{% endif %} href="{% url 'ssh_keys' %}">{% trans "SSH keys" %}</a></p>
+      {% endif %}
     {% endblock %}
     <p><a href="{% url 'cas_logout' %}">{% trans "Logout" %}</a></p>
   </aside>
