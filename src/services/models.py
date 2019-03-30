@@ -1,3 +1,4 @@
+import secrets
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models
@@ -19,6 +20,11 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.key:
+            self.key = secrets.token_urlsafe()
+        return super().save(*args, **kwargs)
 
     def all_users(self):
         return User.objects.filter(
