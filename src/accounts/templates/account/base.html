@@ -16,6 +16,10 @@
         <p><a {% if menu == 'ssh' %}class="active"{% endif %} href="{% url 'ssh_keys' %}">{% trans "SSH keys" %}</a></p>
       {% endif %}
     {% endblock %}
+
+    {% if request.user.is_staff %}
+      <p><a href='/admin/'>{% trans "Administration" %}</a></p>
+    {% endif %}
     <p><a href="{% url 'cas_logout' %}">{% trans "Logout" %}</a></p>
   </aside>
 

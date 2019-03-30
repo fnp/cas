@@ -1,18 +1,21 @@
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 
 class Service(models.Model):
-    name = models.CharField(max_length=255)
-    url = models.URLField(blank=True)
-    key = models.CharField(max_length=255, blank=True)
-    uses_ssh = models.BooleanField(default=False)
-    groups = models.ManyToManyField('auth.Group', blank=True)
-    users = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True)
+    name = models.CharField(_('name'), max_length=255)
+    url = models.URLField(_('URL'), blank=True)
+    key = models.CharField(_('key'), max_length=255, blank=True)
+    uses_ssh = models.BooleanField(_('uses SSH'), default=False)
+    groups = models.ManyToManyField('auth.Group', verbose_name=_('groups'), blank=True)
+    users = models.ManyToManyField(settings.AUTH_USER_MODEL, verbose_name=_('users'), blank=True)
 
     class Meta:
         ordering = ('name', )
+        verbose_name = _('service')
+        verbose_name_plural = _('services')
 
     def __str__(self):
         return self.name

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-29 14:19+0100\n"
+"POT-Creation-Date: 2019-03-30 22:52+0100\n"
 "PO-Revision-Date: 2019-03-29 14:15+0100\n"
 "Last-Translator: Radek Czajka <radoslaw.czajka@nowoczesnapolska.org.pl>\n"
 "Language-Team: \n"
@@ -17,29 +17,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: templates/account/base.html:8
+#: templates/account/base.html:9
 msgid "Change at Gravatar.com"
 msgstr "Zmień na Gravatar.com"
 
-#: templates/account/base.html:10 templates/account/profile.html:5
+#: templates/account/base.html:11 templates/account/profile.html:5
 #: templates/account/profile.html:16
 msgid "Your profile"
 msgstr "Twój profil"
 
-#: templates/account/base.html:11
+#: templates/account/base.html:12
 #: templates/registration/password_change_done.html:14
 msgid "Password change"
 msgstr ""
 
-#: templates/account/base.html:12
+#: templates/account/base.html:13
 msgid "E-mail"
 msgstr "E-mail"
 
-#: templates/account/base.html:13
+#: templates/account/base.html:16
 msgid "SSH keys"
 msgstr "Klucze SSH"
 
-#: templates/account/base.html:15
+#: templates/account/base.html:21
+msgid "Administration"
+msgstr ""
+
+#: templates/account/base.html:23
 msgid "Logout"
 msgstr "Wyloguj"
 

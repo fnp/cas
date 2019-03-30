@@ -133,3 +133,7 @@ footer, #content_push {
 .menu img {
     box-shadow: 0 0 .2em black;
 }
+
+code.key {
+    word-wrap: break-word;
+}
