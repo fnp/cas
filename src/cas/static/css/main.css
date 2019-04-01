@@ -135,5 +135,10 @@ footer, #content_push {
 }
 
 code.key {
-    word-wrap: break-word;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    color: #666;
 }

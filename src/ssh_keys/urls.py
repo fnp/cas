@@ -7,4 +7,5 @@ urlpatterns = [
     path('<int:pk>/delete/', views.DeleteSSHKeyView.as_view(), name='ssh_keys_delete'),
     path('add/', views.AddSSHKeyView.as_view(), name='ssh_keys_add'),
 
+    path('seen/', views.ssh_keys_seen),
 ]

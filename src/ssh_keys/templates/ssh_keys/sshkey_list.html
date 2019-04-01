@@ -13,14 +13,18 @@
   <h1>{% trans "SSH keys" %}</h1>
 
   {% for key in object_list %}
-<p>
-  <code class="key">{{ key.key }}</code><br>
-  {% trans "Added at" %} {{ key.created_at }}<br>
-  <a href="{% url 'ssh_keys_delete' key.id %}">
-    {% trans "Delete" %}
-  </a>
-</p>
-<hr>
+    <p>
+      {{ key.comment }} ({{ key.algorithm}} {{ key.bit_length }})<br>
+      {{ key.md5_hash }}
+      <code class="key">{{ key.key }}</code><br>
+      {% trans "Added" %}: {{ key.created_at }}<br>
+      {% trans "Last seen" %}: {{ key.last_seen_at|default:"–" }}<br>
+
+      <a href="{% url 'ssh_keys_delete' key.id %}">
+        {% trans "Delete" %}
+      </a>
+    </p>
+    <hr>
   {% endfor %}
 
   <a href="{% url 'ssh_keys_add' %}">

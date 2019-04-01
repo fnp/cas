@@ -1,6 +1,19 @@
+from datetime import datetime, timedelta
+import logging
+import re
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
+from django.db import IntegrityError
+from django.db.models import Q
+from django import http
+from django.shortcuts import get_object_or_404
+from django.utils.timezone import now
+from django.utils.translation import ugettext as _
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, DeleteView
+from services.models import Service
 from .models import SSHKey
+from .utils import parse_log_line
 
 
 class SSHKeysView(LoginRequiredMixin, ListView):
@@ -16,7 +29,14 @@ class AddSSHKeyView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
-        return super().form_valid(form)
+        try:
+            return super().form_valid(form)
+        except ValueError as e:
+            messages.add_message(self.request, messages.ERROR, e)
+        except IntegrityError:
+            messages.add_message(self.request, messages.ERROR, _("Key already in the database."))
+        return http.HttpResponseRedirect(self.success_url)
+
 
     
 class DeleteSSHKeyView(LoginRequiredMixin, DeleteView):
@@ -24,4 +44,38 @@ class DeleteSSHKeyView(LoginRequiredMixin, DeleteView):
 
     def get_queryset(self):
         return SSHKey.objects.filter(user=self.request.user)
-    
+
+
+@csrf_exempt
+def ssh_keys_seen(request):
+    logger = logging.getLogger('django.request')
+    key = request.GET.get('key')
+    service = get_object_or_404(Service, key=key)
+    n = now()
+
+    logline_re = r'^(?P<time>\w{3}\s+\d+\s+\d\d:\d\d:\d\d).*: Accepted publickey for .* from .* port .* ssh2: (?P<algo>\w+) (?P<hash>[a-f0-9:]+)$'
+
+    last_seen = {}
+    for line in request.body.decode('latin1').split('\n'):
+        if not line.strip():
+            continue
+        data = parse_log_line(line)
+        if data is None:
+            logger.error('Unparsed: ' + line)
+            break
+        dt = data['datetime']
+        key = data['algo'], data['md5']
+        last_seen[key] = max(last_seen.get(key, dt), dt)
+
+    for key, dt in last_seen.items():
+        algo, md5 = key
+        SSHKey.objects.filter(
+            Q(last_seen_at=None) | Q(last_seen_at__lt=dt),
+            algorithm=algo,
+            md5_hash=md5
+        ).update(
+            last_seen_at=dt
+        )
+
+    return http.HttpResponse('ok')
+

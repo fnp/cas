@@ -10,9 +10,13 @@
 <form method="post">
   {% csrf_token %}
   <p>
+    {{ object.comment }} ({{ object.algorithm}} {{ object.bit_length }})<br>
+    {{ object.md5_hash }}
     <code class="key">{{ object.key }}</code><br>
-    {% trans "Added at" %} {{ object.created_at }}.
-    </p>
+    {% trans "Added" %}: {{ object.created_at }}<br>
+    {% trans "Last seen" %}: {{ object.last_seen_at|default:"–" }}<br>
+  </p>
+
   <button>
     {% trans "Delete" %}
   </button>
