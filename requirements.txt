@@ -1,8 +1,4 @@
--i https://py.mdrn.pl:8443/simple
-
-Django>=2.1,<2.2
-lxml>=2.2
+Django==2.2
 django-gravatar2
-Pillow
 
 -e git+https://github.com/fnp/django-cas-provider.git@413bf45b20e253acdf45c0e43d4f05b1ecf33c0d#egg=django-cas-provider
