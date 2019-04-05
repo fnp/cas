@@ -4,7 +4,12 @@
 
 
 {% block accounts-content %}
-  <h1>{% trans "E-mail" %}</h1>
+  <h1>
+    {% trans "E-mail" %}
+    {% if user != request.user %}
+      ({{ user.username }})
+    {% endif %}
+  </h1>
 
   <h2>{% trans "Default addresses" %}:</h2>
   <ul>

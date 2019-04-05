@@ -9,6 +9,7 @@ from . import BASE_DOMAINS
 def my_aliases(request, user=None):
     user = user or request.user  
     return render(request, 'emails/my_aliases.html', {
+        'user': user,
         'base': ['{}@{}'.format(user.username, dom) for dom in BASE_DOMAINS],
         'from_me': Alias.get_from_user(user),
         })
