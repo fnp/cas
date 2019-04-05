@@ -1,0 +1,28 @@
+{% extends "emails/base.html" %}
+{% load i18n %}
+{% load list_aliases from emails %}
+
+
+{% block accounts-content %}
+  <h1>{% trans "E-mail" %}</h1>
+
+  <h2>{% trans "Default addresses" %}:</h2>
+  <ul>
+  {% for a in base %}
+  <li>{{ a }}</li>
+  {% endfor %}
+  </ul>
+
+  <h2>{% trans "Aliases" %}:</h2>
+  {% list_aliases base %}
+
+  {% if from_me %}
+  <h2>{% trans "E-mail forwarded to" %}:</h2>
+  <ul>
+  {% for alias in from_me %}
+  <li>{{ alias.destination }}</li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% load list_aliases from emails %}
+<ul>
+	{% for alias in aliases %}
+	<li>
+		{% if admin_links %}
+		<a href="{% url 'admin:emails_alias_changelist' %}?source__exact={{ alias }}">
+		{% endif %}
+		{{ alias }}
+		{% if admin_links %}</a>{% endif %}
+		{% list_aliases alias %}
+	</li>
+	{% endfor %}
+</ul>

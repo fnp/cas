@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from . import BASE_DOMAINS
+
 
 
 class Alias(models.Model):
@@ -18,3 +20,13 @@ class Alias(models.Model):
 
     def __str__(self):
         return '{} -> {}'.format(self.source, self.destination)
+
+    @classmethod
+    def get_from_user(cls, user):
+        lookups = ["{}@{}".format(user.username, domain) for domain in BASE_DOMAINS]
+        return cls.objects.filter(source__in=lookups)
+
+    @classmethod
+    def get_to_user(cls, user):
+        lookups = ["{}@{}".format(user.username, domain) for domain in BASE_DOMAINS]
+        return cls.objects.filter(destination__in=lookups)
