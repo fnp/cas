@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-05 09:43+0200\n"
-"PO-Revision-Date: 2019-04-05 09:43+0200\n"
+"POT-Creation-Date: 2019-04-05 11:31+0200\n"
+"PO-Revision-Date: 2019-04-05 11:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -32,10 +32,22 @@ msgstr "źródło"
 msgid "destination"
 msgstr "cel"
 
+#: models.py:8
+msgid "mode"
+msgstr "tryb"
+
+#: models.py:9
+msgid "Forward everything"
+msgstr "Przekazuj wszystko"
+
 #: models.py:10
+msgid "Do not forward e-mail marked as spam."
+msgstr "Nie przekazuj wiadomości oznaczonych jako spam."
+
+#: models.py:14
 msgid "alias"
 msgstr "alias"
 
-#: models.py:11
+#: models.py:15
 msgid "aliases"
 msgstr "aliasy"

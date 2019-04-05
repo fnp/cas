@@ -3,7 +3,9 @@ from . import models
 
 
 class AliasAdmin(admin.ModelAdmin):
-    list_display = ['source', 'destination']
+    search_fields = ['source', 'destination']
+    list_display = ['source', 'destination', 'mode']
+    list_filter = ['mode']
 
 
 admin.site.register(models.Alias, AliasAdmin)
