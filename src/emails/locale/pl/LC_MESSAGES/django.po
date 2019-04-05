@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-05 14:46+0200\n"
+"POT-Creation-Date: 2019-04-05 23:03+0200\n"
 "PO-Revision-Date: 2019-04-05 14:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -44,7 +44,7 @@ msgstr "Przekazuj wszystko"
 msgid "Do not forward e-mail marked as spam."
 msgstr "Nie przekazuj wiadomości oznaczonych jako spam."
 
-#: models.py:17
+#: models.py:17 models.py:36
 msgid "alias"
 msgstr "alias"
 
@@ -52,18 +52,31 @@ msgstr "alias"
 msgid "aliases"
 msgstr "aliasy"
 
-#: templates/emails/my_aliases.html:7
+#: models.py:37
+msgid "date"
+msgstr "data"
+
+#: models.py:38
+msgid "count"
+msgstr "liczba"
+
+#: models.py:42 models.py:43
+#| msgid "aliases"
+msgid "alias usage"
+msgstr "użycie aliasów"
+
+#: templates/emails/my_aliases.html:8
 msgid "E-mail"
 msgstr "E-mail"
 
-#: templates/emails/my_aliases.html:9
+#: templates/emails/my_aliases.html:14
 msgid "Default addresses"
 msgstr "Domyślne adresy"
 
-#: templates/emails/my_aliases.html:16
+#: templates/emails/my_aliases.html:21
 msgid "Aliases"
 msgstr "Aliasy"
 
-#: templates/emails/my_aliases.html:20
+#: templates/emails/my_aliases.html:25
 msgid "E-mail forwarded to"
 msgstr "E-mail przekazywany na adres"

@@ -30,3 +30,14 @@ class Alias(models.Model):
     def get_to_user(cls, user):
         lookups = ["{}@{}".format(user.username, domain) for domain in BASE_DOMAINS]
         return cls.objects.filter(destination__in=lookups)
+
+
+class AliasUsage(models.Model):
+    alias = models.ForeignKey(Alias, models.CASCADE, _('alias'))
+    date = models.DateField(_('date'), auto_now_add=True)
+    count = models.PositiveSmallIntegerField(_('count'))
+
+    class Meta:
+        unique_together = (('alias', 'date'),)
+        verbose_name = _('alias usage')
+        verbose_name_plural = _('alias usage')
