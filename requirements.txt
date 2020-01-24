@@ -1,4 +1,4 @@
-Django==2.2.6
+Django==2.2.8
 django-gravatar2
 
 -e git+https://github.com/fnp/django-cas-provider.git@413bf45b20e253acdf45c0e43d4f05b1ecf33c0d#egg=django-cas-provider
