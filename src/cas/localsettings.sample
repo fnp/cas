@@ -1,0 +1,6 @@
+# Copy this to localsettings.py and set any settings you need to change. 
+
+DEBUG = True
+SECRET_KEY = ''
+ALLOWED_HOSTS = []
+
