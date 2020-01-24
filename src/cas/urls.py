@@ -8,7 +8,7 @@ admin.site.site_header = settings.SITE_TITLE
 
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='/accounts/', permanent=False)),
+    path('', RedirectView.as_view(url=settings.LOGIN_REDIRECT_URL, permanent=False)),
 
     # django-cas-provider
     path('cas/', include('cas_provider.urls')),
