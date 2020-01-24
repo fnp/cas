@@ -17,13 +17,18 @@ Instalacja i uruchomienie
 
     pip install -r requirements.txt
 
-2. Wypełnij bazę danych (Django poprosi o utworzenie pierwszego użytkownika)
+2. Wypełnij bazę danych
 
-	./manage.py syncdb --migrate
-	
+	./manage.py migrate
+
+3. Aby utworzyć pierwszego użytkownika, użyj komendy:
+
+	./manage createsuperuser
+
 5. Uruchom serwer deweloperski
 
 	./manage.py runserver
 
 6. Przy wdrożeniu utwórz plik `localsettings.py` i wpisz tam 
-ustawienia używanej bazy danych.
+ustawienia używanej bazy danych. Do przygotowania wersji do
+wdrożenia możesz użyć komendy `make deploy`.
