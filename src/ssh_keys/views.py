@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-import logging
 import re
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
@@ -48,7 +47,6 @@ class DeleteSSHKeyView(LoginRequiredMixin, DeleteView):
 
 @csrf_exempt
 def ssh_keys_seen(request):
-    logger = logging.getLogger('django.request')
     key = request.GET.get('key')
     service = get_object_or_404(Service, key=key)
     n = now()
@@ -61,8 +59,7 @@ def ssh_keys_seen(request):
             continue
         data = parse_log_line(line)
         if data is None:
-            logger.error('Unparsed: ' + line)
-            break
+            continue
         dt = data['datetime']
         algo = data['algo']
         if 'md5' in data:
