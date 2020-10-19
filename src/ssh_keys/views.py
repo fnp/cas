@@ -64,15 +64,22 @@ def ssh_keys_seen(request):
             logger.error('Unparsed: ' + line)
             break
         dt = data['datetime']
-        key = data['algo'], data['md5']
+        algo = data['algo']
+        if 'md5' in data:
+            hash_type = 'md5'
+            hash_value = data['md5']
+        else:
+            hash_type = 'sha256'
+            hash_value = data['sha256']
+        key = algo, hash_type, hash_value
         last_seen[key] = max(last_seen.get(key, dt), dt)
 
     for key, dt in last_seen.items():
-        algo, md5 = key
+        algo, hash_type, hash_value = key
         SSHKey.objects.filter(
             Q(last_seen_at=None) | Q(last_seen_at__lt=dt),
             algorithm=algo,
-            md5_hash=md5
+            **{f'{hash_type}_hash': hash_value}
         ).update(
             last_seen_at=dt
         )

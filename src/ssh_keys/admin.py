@@ -4,9 +4,9 @@ from .models import SSHKey
 
 
 class SSHKeyAdmin(admin.ModelAdmin):
-    fields = ['user',  'key', 'algorithm', 'bit_length', 'md5_hash', 'created_at', 'last_seen_at']
-    readonly_fields = ['algorithm', 'bit_length', 'md5_hash', 'created_at', 'last_seen_at']
-    list_display = ['comment', 'last_seen_at', 'user', 'md5_hash', 'algorithm', 'bit_length', 'created_at']
+    fields = ['user',  'key', 'algorithm', 'bit_length', 'sha256_hash', 'md5_hash', 'created_at', 'last_seen_at']
+    readonly_fields = ['algorithm', 'bit_length', 'sha256_hash', 'md5_hash', 'created_at', 'last_seen_at']
+    list_display = ['comment', 'last_seen_at', 'user', 'sha256_hash', 'algorithm', 'bit_length', 'created_at']
     ordering = (F('last_seen_at').desc(nulls_last=True),)
 
 admin.site.register(SSHKey, SSHKeyAdmin)
