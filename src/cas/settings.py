@@ -37,6 +37,8 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = True
 
+USE_TZ = True
+
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = path.join(PROJECT_ROOT, '../../media/')
@@ -90,6 +92,7 @@ INSTALLED_APPS = (
 
     'cas_provider',
     'django_gravatar',
+    'oidc_provider',
 
     'django.contrib.auth',
     'django.contrib.contenttypes',
