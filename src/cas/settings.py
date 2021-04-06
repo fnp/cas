@@ -125,6 +125,10 @@ GRAVATAR_URL_PREFIX = 'https://www.gravatar.com/'
 
 SITE_TITLE = 'Fundacja Nowoczesna Polska'
 
+
+OIDC_USERINFO = 'emails.oidc.userinfo'
+
+
 # Import localsettings file, which may override settings defined here
 try:
     from .localsettings import *
