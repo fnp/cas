@@ -1,4 +1,4 @@
-Django==3.1.7
+Django==3.1.10
 django-gravatar2==1.4.4
 django-oidc-provider2==0.8.3
 
