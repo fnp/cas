@@ -1,5 +1,5 @@
-Django==3.1.7
+Django==3.2.6
 django-gravatar2==1.4.4
 django-oidc-provider2==0.8.3
 
--e git+https://github.com/fnp/django-cas-provider.git@53585f7615b3a647d1badda1a2ebd7f5ec81f607#egg=django-cas-provider
+-e git+https://github.com/fnp/django-cas-provider.git@122f2f5678cfe723a44c140206da2cb9117b46ee#egg=django-cas-provider

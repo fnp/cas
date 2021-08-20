@@ -1,0 +1,21 @@
+{% extends 'services/base.html' %}
+{% load i18n %}
+
+{% block accounts-content %}
+  <h1>{% translate "Services" %}</h1>
+
+  <div class="service-list">
+    {% for service in object_list %}
+      <a class="service" href="{% if service.url %}{{ service.url }}{% else %}{% url 'service_detail' service.pk %}{% endif %}" title="{{ service.name }}">
+        {% if service.icon %}
+          <img class="service-icon" alt="{{ service.name }}" src="{{ service.icon.url }}">
+        {% else %}
+          <span class="service-name">
+            {{ service.name }}
+          </span>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+
+{% endblock %}

@@ -10,25 +10,34 @@
 
 
 {% block accounts-content %}
+  <a href="{% url 'ssh_keys_add' %}" class="btn btn-primary float-end" >
+    {% trans "Add" %}
+  </a>
+
   <h1>{% trans "SSH keys" %}</h1>
 
   {% for key in object_list %}
-    <p>
-      {{ key.comment }} ({{ key.algorithm}} {{ key.bit_length }})<br>
-      {{ key.md5_hash }}
-      <code class="key">{{ key.key }}</code><br>
-      {% trans "Added" %}: {{ key.created_at }}<br>
-      {% trans "Last seen" %}: {{ key.last_seen_at|default:"–" }}<br>
+    <div class="card mb-2">
+      <div class="card-header">
+        {{ key.comment }} ({{ key.algorithm}} {{ key.bit_length }})<br>
+      </div>
+      <div class="card-body">
+        {% trans "Added" %}: {{ key.created_at }}<br>
+        {% trans "Last seen" %}: {{ key.last_seen_at|default:"–" }}<br>
 
-      <a href="{% url 'ssh_keys_delete' key.id %}">
-        {% trans "Delete" %}
-      </a>
-    </p>
-    <hr>
+        <br>
+        {{ key.md5_hash }}
+        <code class="key">{{ key.key }}</code><br>
+        <a href="{% url 'ssh_keys_delete' key.id %}" class="btn btn-danger">
+          {% trans "Delete" %}
+        </a>
+      </div>
+    </div>
+  {% empty %}
+    <div class="alert alert-warning">
+      {% translate "You don't have any SSH keys." %}
+    </div>
   {% endfor %}
 
-  <a href="{% url 'ssh_keys_add' %}">
-    {% trans "Add" %}
-  </a>
 
 {% endblock %}

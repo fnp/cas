@@ -1,4 +1,4 @@
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 from .models import Service
 
 
@@ -13,3 +13,12 @@ class SshAuthorizedKeysView(DetailView):
             obj = None
         return obj
 
+
+class ServicesView(ListView):
+    def get_queryset(self):
+        return Service.for_user(self.request.user)
+
+
+class ServiceDetail(DetailView):
+    def get_queryset(self):
+        return Service.for_user(self.request.user)

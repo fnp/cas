@@ -132,6 +132,7 @@ footer, #content_push {
 
 .menu img {
     box-shadow: 0 0 .2em black;
+    margin-bottom: 1em;
 }
 
 code.key {
@@ -141,4 +142,31 @@ code.key {
     text-overflow: ellipsis;
     display: block;
     color: #666;
+}
+
+
+.service-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+a.service {
+    width: 130px;
+    height: 80px;
+    background: white;
+    box-shadow:  3px 3px 5px #aaa;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+a.service:hover {
+    text-decoration: none;
+    background: orange;
+}
+.service-icon {
+    max-width: 100%;
+    max-height: 100%;
 }

@@ -1,0 +1,29 @@
+{% extends "services/base.html" %}
+{% load i18n %}
+
+
+{% block accounts-content %}
+  <h1>{% translate "Serwis" %}: {{ service.name }}</h1>
+
+  {% if service.url %}
+    {{ service.url }}
+  {% endif %}
+
+  {% if service.uses_ssh %}
+    {% url 'ssh_keys' as url_ssh_keys %}
+    {% if request.user.sshkey_set.exists %}
+      {% blocktrans %}
+        This service will use your <a href="{{ url_ssh_keys}}">SSH keys.</a>
+      {% endblocktrans %}
+    {% else %}
+      <div class="alert alert-warning">
+        {% blocktrans %}
+          This service uses SSH keys.
+          You can add one in the <a href="{{ url_ssh_keys}}">SSH keys</a> section.
+        {% endblocktrans %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {{ service.description|linebreaks }}
+{% endblock %}

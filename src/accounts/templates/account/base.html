@@ -9,6 +9,7 @@
          alt="Gravatar"
          title="{% trans 'Change at Gravatar.com' %}">
     {% block menu %}
+      <p><a {% if menu == 'services' %}class="active"{% endif %} href="{% url 'services' %}">{% trans "Services" %}</a></p>
       <p><a {% if menu == 'profile' %}class="active"{% endif %} href="{% url 'accounts_profile' %}">{% trans "Your profile" %}</a></p>
       <p><a {% if menu == 'password' %}class="active"{% endif %} href="{% url 'password_change' %}">{% trans "Password change" %}</a></p>
       {% use_email as use_email %}
@@ -29,11 +30,13 @@
 
   <div id="details">
     {% if messages %}
-      <section id="messages">
-        {% for message in messages %}<p>{{ message }}</p>{% endfor %}
-      </section>
+        {% for message in messages %}
+          <div class="alert alert-primary">
+            {{ message }}
+          </div>
+        {% endfor %}
     {% endif %}
-      
+
     {% block accounts-content %}
     {% endblock %}
   </div>
