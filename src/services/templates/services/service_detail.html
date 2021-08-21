@@ -3,7 +3,7 @@
 
 
 {% block accounts-content %}
-  <h1>{% translate "Serwis" %}: {{ service.name }}</h1>
+  <h1>{% translate "Service" %}: {{ service.name }}</h1>
 
   {% if service.url %}
     {{ service.url }}
@@ -19,11 +19,11 @@
       <div class="alert alert-warning">
         {% blocktrans %}
           This service uses SSH keys.
-          You can add one in the <a href="{{ url_ssh_keys}}">SSH keys</a> section.
+          You can add one in the <a href="{{ url_ssh_keys }}">SSH keys</a> section.
         {% endblocktrans %}
       </div>
     {% endif %}
   {% endif %}
 
-  {{ service.description|linebreaks }}
+  {{ service.descriptions|safe|linebreaks }}
 {% endblock %}
