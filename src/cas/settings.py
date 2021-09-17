@@ -89,6 +89,7 @@ LOCALE_PATHS = (
 INSTALLED_APPS = (
     'accounts.apps.AccountsConfig',
     'emails.apps.EmailsConfig',
+    'ftp',
     'services.apps.ServicesConfig',
     'ssh_keys.apps.SshKeysConfig',
 
