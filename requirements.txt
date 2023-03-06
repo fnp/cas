@@ -1,6 +1,6 @@
 -i https://py.mdrn.pl/simple/
 
-Django==3.2.13
+Django==3.2.18
 django-gravatar2==1.4.4
 django-oidc-provider2==0.9.1
-django-cas-provider==22.4
+django-cas-provider==23.3

@@ -4,7 +4,6 @@
 
 .enclose {
     height: 450px;
-    background: url("../brackets.png") no-repeat 50% 0;
     margin: 1em 0;
     background-size: auto 450px;
     display: flex;
