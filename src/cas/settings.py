@@ -27,7 +27,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Warsaw'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -126,7 +126,7 @@ SESSION_COOKIE_NAME = 'fnpcas'
 GRAVATAR_DEFAULT_IMAGE = 'mm'
 GRAVATAR_URL_PREFIX = 'https://www.gravatar.com/'
 
-SITE_TITLE = 'Fundacja Nowoczesna Polska'
+SITE_TITLE = 'Fundacja Wolne Lektury'
 
 
 OIDC_USERINFO = 'emails.oidc.userinfo'
