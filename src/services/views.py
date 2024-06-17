@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, ListView
 from .models import Service
 
@@ -14,11 +15,11 @@ class SshAuthorizedKeysView(DetailView):
         return obj
 
 
-class ServicesView(ListView):
+class ServicesView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return Service.for_user(self.request.user)
 
 
-class ServiceDetail(DetailView):
+class ServiceDetail(LoginRequiredMixin, DetailView):
     def get_queryset(self):
         return Service.for_user(self.request.user)

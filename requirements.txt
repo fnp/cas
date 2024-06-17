@@ -4,3 +4,7 @@ Django==4.1.13
 django-gravatar2==1.4.4
 django-oidc-provider2==0.9.1
 django-cas-provider==24.6
+
+bcrypt==4.1.3
+
+ipython
