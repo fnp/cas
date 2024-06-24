@@ -40,9 +40,9 @@ else:
     }
 
 
-DEBUG = os.environ.get('DEBUG', str(DEBUG)).lower() == 'True'
+DEBUG = os.environ.get('DEBUG', str(DEBUG)).lower() == 'true'
 
-
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'localhost')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', '')
 EMAIL_SUBJECT_PREFIX = os.environ.get('EMAIL_SUBJECT_PREFIX', '')
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
