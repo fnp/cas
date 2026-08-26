@@ -30,4 +30,13 @@
   </ul>
   {% endif %}
 
+  <h2>{% trans "Shared mailboxes" %}:</h2>
+  <ul>
+  {% for mailbox in user.sharedmailbox_set.all %}
+  <li>
+    {{ mailbox.name }}
+  </li>
+  {% endfor %}
+  </ul>
+
 {% endblock %}

@@ -41,3 +41,16 @@ class AliasUsage(models.Model):
         unique_together = (('alias', 'date'),)
         verbose_name = _('alias usage')
         verbose_name_plural = _('alias usage')
+
+
+class SharedMailbox(models.Model):
+    name = models.CharField(_('name'), max_length=255, blank=True)
+    users = models.ManyToManyField('auth.User')
+
+    class Meta:
+        verbose_name = _('shared mailbox')
+        verbose_name_plural = _('shared mailboxes')
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
