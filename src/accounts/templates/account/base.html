@@ -20,8 +20,10 @@
       {% if use_ssh %}
         <p><a {% if menu == 'ssh' %}class="active"{% endif %} href="{% url 'ssh_keys' %}">{% trans "SSH keys" %}</a></p>
       {% endif %}
+      {% if perms.auth.add_user %}
+        <p><a {% if menu == 'onboarding' %}class="active"{% endif %} href="{% url 'onboarding' %}">{% trans "Onboarding" %}</a></p>
+      {% endif %}
     {% endblock %}
-
     {% if request.user.is_staff %}
       <p><a href='/admin/'>{% trans "Administration" %}</a></p>
     {% endif %}

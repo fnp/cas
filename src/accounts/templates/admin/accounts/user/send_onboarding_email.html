@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label='auth' %}">{% trans 'Authentication and Authorization' %}</a>
+&rsaquo; <a href="{% url 'admin:auth_user_changelist' %}">{% trans 'Users' %}</a>
+&rsaquo; <a href="{% url 'admin:auth_user_change' user_obj.pk %}">{{ user_obj }}</a>
+&rsaquo; {% trans "Send onboarding email" %}
+</div>
+{% endblock %}
+
+{% block content %}
+<p>{% blocktrans with username=user_obj.username email=user_obj.email %}Are you sure you want to send an onboarding email to user "{{ username }}" ({{ email }})?{% endblocktrans %}</p>
+<p>{% trans "This will generate a new password and send it to the user's email address." %}</p>
+
+<form method="post">
+{% csrf_token %}
+<div class="submit-row">
+    <input type="submit" value="{% trans 'Send onboarding email' %}">
+    <a href="{% url 'admin:auth_user_change' user_obj.pk %}" class="button cancel-link">{% trans "Cancel" %}</a>
+</div>
+</form>
+{% endblock %}

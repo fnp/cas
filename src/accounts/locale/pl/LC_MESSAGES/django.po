@@ -155,3 +155,104 @@ msgstr "Resetowanie hasła"
 #: accounts/views.py:18
 msgid "Profile has been changed."
 msgstr "Profil został zmieniony."
+
+#: accounts/models.py
+msgid "subject"
+msgstr "temat"
+
+#: accounts/models.py
+msgid "body"
+msgstr "treść"
+
+#: accounts/models.py
+msgid "Available placeholders: {username}, {password}, {first_name}, {last_name}"
+msgstr "Dostępne zmienne: {username}, {password}, {first_name}, {last_name}"
+
+#: accounts/models.py
+msgid "onboarding email template"
+msgstr "szablon maila onboardingowego"
+
+#: accounts/models.py
+msgid "onboarding email templates"
+msgstr "szablony maili onboardingowych"
+
+#: accounts/forms.py
+msgid "First name"
+msgstr "Imię"
+
+#: accounts/forms.py
+msgid "Last name"
+msgstr "Nazwisko"
+
+#: accounts/forms.py
+msgid "External email"
+msgstr "Zewnętrzny email"
+
+#: accounts/forms.py
+msgid "Username"
+msgstr "Login"
+
+#: accounts/forms.py
+msgid "Auto-generated from first and last name"
+msgstr "Generowany automatycznie z imienia i nazwiska"
+
+#: accounts/forms.py
+msgid "User with this username already exists."
+msgstr "Użytkownik o tym loginie już istnieje."
+
+#: accounts/views.py
+msgid "User %(username)s has been created and email sent to %(email)s."
+msgstr "Użytkownik %(username)s został utworzony i wysłano email na %(email)s."
+
+#: accounts/views.py
+msgid "User %(username)s has been created, but no email template is configured."
+msgstr "Użytkownik %(username)s został utworzony, ale brak skonfigurowanego szablonu maila."
+
+#: accounts/templates/account/onboarding.html
+msgid "User onboarding"
+msgstr "Onboarding użytkownika"
+
+#: accounts/templates/account/onboarding.html
+msgid "Create user"
+msgstr "Utwórz użytkownika"
+
+#: accounts/templates/account/base.html
+msgid "Onboarding"
+msgstr "Onboarding"
+
+#: accounts/admin.py
+msgid "No onboarding email template configured."
+msgstr "Brak skonfigurowanego szablonu maila onboardingowego."
+
+#: accounts/admin.py
+msgid "Onboarding email sent to %(email)s. Password has been reset."
+msgstr "Mail onboardingowy wysłany na %(email)s. Hasło zostało zresetowane."
+
+#: accounts/admin.py
+msgid "Send onboarding email"
+msgstr "Wyślij mail onboardingowy"
+
+#: accounts/templates/admin/accounts/user/send_onboarding_email.html
+msgid "Home"
+msgstr "Strona główna"
+
+#: accounts/templates/admin/accounts/user/send_onboarding_email.html
+msgid "Authentication and Authorization"
+msgstr "Uwierzytelnianie i autoryzacja"
+
+#: accounts/templates/admin/accounts/user/send_onboarding_email.html
+msgid "Users"
+msgstr "Użytkownicy"
+
+#: accounts/templates/admin/accounts/user/send_onboarding_email.html
+#, python-format
+msgid "Are you sure you want to send an onboarding email to user \"%(username)s\" (%(email)s)?"
+msgstr "Czy na pewno chcesz wysłać mail onboardingowy do użytkownika \"%(username)s\" (%(email)s)?"
+
+#: accounts/templates/admin/accounts/user/send_onboarding_email.html
+msgid "This will generate a new password and send it to the user's email address."
+msgstr "Spowoduje to wygenerowanie nowego hasła i wysłanie go na adres email użytkownika."
+
+#: accounts/templates/admin/accounts/user/send_onboarding_email.html
+msgid "Cancel"
+msgstr "Anuluj"

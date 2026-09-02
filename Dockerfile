@@ -10,6 +10,7 @@ WORKDIR /app/src
 
 FROM base AS dev
 
+RUN apk add --no-cache gettext
 RUN pip install --no-cache-dir coverage
 
 

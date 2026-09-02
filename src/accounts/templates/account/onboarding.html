@@ -1,0 +1,74 @@
+{% extends "account/base.html" %}
+{% load i18n %}
+
+
+{% block title %}{% trans "User onboarding" %}{% endblock %}
+
+
+{% block menu %}
+  {% with menu="onboarding" %}
+    {{ block.super }}
+  {% endwith %}
+{% endblock %}
+
+
+{% block accounts-content %}
+  <h1>{% trans "User onboarding" %}</h1>
+  <form method="post">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+      <div class="alert alert-danger">
+        {{ form.non_field_errors }}
+      </div>
+    {% endif %}
+    <p>
+      <label for="id_first_name">{{ form.first_name.label }}</label>
+      {{ form.first_name }}
+      {% if form.first_name.errors %}<span class="text-danger">{{ form.first_name.errors }}</span>{% endif %}
+    </p>
+    <p>
+      <label for="id_last_name">{{ form.last_name.label }}</label>
+      {{ form.last_name }}
+      {% if form.last_name.errors %}<span class="text-danger">{{ form.last_name.errors }}</span>{% endif %}
+    </p>
+    <p>
+      <label for="id_email">{{ form.email.label }}</label>
+      {{ form.email }}
+      {% if form.email.errors %}<span class="text-danger">{{ form.email.errors }}</span>{% endif %}
+    </p>
+    <p>
+      <label for="id_username">{{ form.username.label }}</label>
+      {{ form.username }}
+      <small class="text-muted">{{ form.username.help_text }}</small>
+      {% if form.username.errors %}<span class="text-danger">{{ form.username.errors }}</span>{% endif %}
+    </p>
+    <p><button type="submit" class="btn btn-primary">{% trans "Create user" %}</button></p>
+  </form>
+
+  <script>
+    (function() {
+      const firstNameInput = document.getElementById('id_first_name');
+      const lastNameInput = document.getElementById('id_last_name');
+      const usernameInput = document.getElementById('id_username');
+
+      function removeDiacritics(str) {
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      }
+
+      function generateUsername() {
+        const firstName = firstNameInput.value || '';
+        const lastName = lastNameInput.value || '';
+        const combined = firstName + lastName;
+        const normalized = removeDiacritics(combined);
+        const ascii = normalized.replace(/[^a-zA-Z]/g, '');
+        usernameInput.value = ascii.toLowerCase();
+      }
+
+      firstNameInput.addEventListener('input', generateUsername);
+      lastNameInput.addEventListener('input', generateUsername);
+
+      // Generate on page load if values exist
+      generateUsername();
+    })();
+  </script>
+{% endblock %}
