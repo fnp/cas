@@ -172,6 +172,12 @@ CAS_CUSTOM_ATTRIBUTES_CALLBACK = 'cas.utils.custom_attributes_callback'
 
 
 OIDC_USERINFO = 'emails.oidc.userinfo'
+# Include user claims in ID token, so clients don't need to call userinfo.
+OIDC_IDTOKEN_INCLUDE_CLAIMS = True
+# Fixed issuer base URL, e.g. https://cas.example.org
+# (the issuer will be ISSUER_URL + '/openid').
+# Without it, the issuer is derived from the request.
+ISSUER_URL = os.environ.get('ISSUER_URL') or None
 
 PASSWORD_HASHERS = (
     'cas.hashers.FNPBCryptPasswordHasher',
