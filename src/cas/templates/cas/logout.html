@@ -17,7 +17,7 @@
 	<p>{% blocktrans %}You can return to service you came from: <a href="{{ url }}">{{ url }}</a>{% endblocktrans %}</p>
 	{% endif %}
 
-	{% url 'cas_login' as login_url %}
+	{% url 'login' as login_url %}
     <p>{% blocktrans %}You can also <a href="{{ login_url }}">login again</a>{% endblocktrans %}</p>
 
 </div></div>

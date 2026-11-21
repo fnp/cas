@@ -6,7 +6,7 @@ from django.db import IntegrityError
 from django.db.models import Q
 from django import http
 from django.shortcuts import get_object_or_404
-from django.utils.timezone import now
+from django.utils.timezone import make_aware, now
 from django.utils.translation import gettext as _
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, CreateView, DeleteView
@@ -60,7 +60,8 @@ def ssh_keys_seen(request):
         data = parse_log_line(line)
         if data is None:
             continue
-        dt = data['datetime']
+        # Log times are naive; assume they're in the local time zone (TIME_ZONE).
+        dt = make_aware(data['datetime'])
         algo = data['algo']
         if 'md5' in data:
             hash_type = 'md5'

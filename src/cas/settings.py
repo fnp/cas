@@ -164,20 +164,19 @@ MIDDLEWARE = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-# django-cas-provider settings
-LOGIN_URL = '/cas/login'
-LOGOUT_URL = '/cas/logout'
+LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/accounts/'
+
 CAS_CUSTOM_ATTRIBUTES_CALLBACK = 'cas.utils.custom_attributes_callback'
 
 
 OIDC_USERINFO = 'emails.oidc.userinfo'
 # Include user claims in ID token, so clients don't need to call userinfo.
 OIDC_IDTOKEN_INCLUDE_CLAIMS = True
-# Fixed issuer base URL, e.g. https://cas.example.org
-# (the issuer will be ISSUER_URL + '/openid').
-# Without it, the issuer is derived from the request.
-ISSUER_URL = os.environ.get('ISSUER_URL') or None
+# Fixed base URL, e.g. https://cas.example.org
+# (the OIDC issuer will be SITE_URL + '/openid').
+# Without it, it's derived from the request.
+SITE_URL = os.environ.get('SITE_URL') or None
 
 PASSWORD_HASHERS = (
     'cas.hashers.FNPBCryptPasswordHasher',

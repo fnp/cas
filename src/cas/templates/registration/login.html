@@ -4,19 +4,12 @@
 {% block content %}
 
 <div class="enclose">
-  <form class="enclosed" id="login-form" action='{% url "cas_login" %}' method='post'>
+  <form class="enclosed" id="login-form" action='' method='post'>
     {% csrf_token %}
     <h1>{% trans "Login" %}</h1>
 
-    {% if errors %}
-        <ul class="errorlist">
-        {% for error in errors %}
-            <li>{{ error }}</li>
-        {% endfor %}
-        </ul>
-    {% endif %}
-
     {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ next }}" />
     <input type="submit" value="{% trans 'Log me in' %}" tabindex="10" />
 
     <div style="text-align: right">

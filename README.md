@@ -32,3 +32,19 @@ Instalacja i uruchomienie
 6. Przy wdrożeniu utwórz plik `localsettings.py` i wpisz tam 
 ustawienia używanej bazy danych. Do przygotowania wersji do
 wdrożenia możesz użyć komendy `make deploy`.
+
+OpenID Connect
+--------------
+
+Aplikacja działa też jako dostawca OIDC (`django-oidc-provider`),
+pod adresem `/openid/` (konfiguracja: `/openid/.well-known/openid-configuration`).
+
+Przy wdrożeniu:
+
+* ustaw zmienną środowiskową `SITE_URL` (np. `https://cas.example.org`);
+  issuer będzie wtedy `https://cas.example.org/openid`,
+* jednorazowo wygeneruj klucz podpisujący: `./manage.py creatersakey`,
+* klientów (usługi) dodaje się w panelu admina: OpenID Connect Provider → Clients.
+
+Udostępniane claimy (`emails/oidc.py`): `sub` (id użytkownika), `preferred_username`
+(login), `name`, `given_name`, `family_name`, `email`, `email_verified`.

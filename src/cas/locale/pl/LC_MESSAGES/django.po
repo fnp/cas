@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-03-29 14:16+0100\n"
+"PO-Revision-Date: 2026-11-21 01:32+0100\n"
 "Last-Translator: Radek Czajka <radoslaw.czajka@nowoczesnapolska.org.pl>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -16,21 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.6\n"
-
-#: cas/templates/cas/login.html:9
-msgid "Login"
-msgstr "Zaloguj"
-
-#: cas/templates/cas/login.html:20
-msgid "Log me in"
-msgstr "Zaloguj mnie"
-
-#: cas/templates/cas/login.html:23
-msgid "Forgot password?"
-msgstr "Nie pamiętasz hasła?"
+"X-Generator: Poedit 3.6\n"
 
 #: cas/templates/cas/logout.html:5 cas/templates/cas/logout.html:12
+#: cas/templates/oidc_provider/end_session_completed.html:7
 msgid "Logged out"
 msgstr "Wylogowano"
 
@@ -52,3 +41,62 @@ msgstr "Możesz wrócić do serwisu: <a href=\"%(url)s\">%(url)s</a>."
 #, python-format
 msgid "You can also <a href=\"%(login_url)s\">login again</a>"
 msgstr "Możesz też <a href=\"%(login_url)s\">zalogować się ponownie</a>."
+
+#: cas/templates/oidc_provider/end_session_completed.html:8
+msgid "You've been logged out."
+msgstr "Wylogowano Cię."
+
+#: cas/templates/oidc_provider/end_session_completed.html:9
+msgid "Log in again"
+msgstr "Zaloguj się ponownie"
+
+#: cas/templates/oidc_provider/end_session_failed.html:7
+msgid "Not logged out"
+msgstr "Nie wylogowano"
+
+#: cas/templates/oidc_provider/end_session_failed.html:8
+msgid "You're still logged in. You can close this window."
+msgstr "Nadal jesteś zalogowany/-a. Możesz zamknąć to okno."
+
+#: cas/templates/oidc_provider/end_session_failed.html:9
+msgid "Go to your account"
+msgstr "Przejdź do swojego konta"
+
+#: cas/templates/oidc_provider/end_session_prompt.html:8
+#: cas/templates/oidc_provider/end_session_prompt.html:16
+msgid "Log out"
+msgstr "Wyloguj"
+
+#: cas/templates/oidc_provider/end_session_prompt.html:11
+#, python-format
+msgid "Do you want to log out (you've been using %(name)s)?"
+msgstr "Czy chcesz się wylogować (po używaniu %(name)s)?"
+
+#: cas/templates/oidc_provider/end_session_prompt.html:13
+msgid "Do you want to log out?"
+msgstr "Czy chcesz się wylogować?"
+
+#: cas/templates/oidc_provider/end_session_prompt.html:17
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: cas/templates/registration/login.html:9
+msgid "Login"
+msgstr "Zaloguj"
+
+#: cas/templates/registration/login.html:13
+msgid "Log me in"
+msgstr "Zaloguj mnie"
+
+#: cas/templates/registration/login.html:16
+msgid "Forgot password?"
+msgstr "Nie pamiętasz hasła?"
+
+#: ftp/admin.py:19
+#, python-format
+msgid ""
+"Password for <strong>%(login)s</strong> set to: <input disabled "
+"value=\"%(password)s\">."
+msgstr ""
+"Hasło dla <strong>%(login)s</strong> ustawione na: <input disabled "
+"value=\"%(password)s\">."

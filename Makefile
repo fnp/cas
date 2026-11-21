@@ -11,7 +11,7 @@ deploy: src/cas/localsettings.py
 
 test:
 	rm -r htmlcov &
-	docker-compose run --rm dev sh -c '\
+	docker compose run --rm dev sh -c '\
 		coverage run --branch --source='.' --data-file ../.coverage ./manage.py test; \
 		coverage html --data-file ../.coverage -d htmlcov; \
 		coverage report --data-file ../.coverage; \
