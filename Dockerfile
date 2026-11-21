@@ -1,4 +1,4 @@
-FROM python:3.10-alpine AS base
+FROM python:3.12-alpine AS base
 
 RUN	apk update && apk add --no-cache \
 	openssh-keygen
